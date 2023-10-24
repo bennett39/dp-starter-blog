@@ -9,8 +9,6 @@ keywords: []
 slug: /@bennettgarner/why-choose-gridsome-over-vuepress-or-nuxt-af1aa0d97785
 ---
 
-![](/Users/bennettgarner/Repos/medium-export-4b46aa4e91f20dbf349cd1ed9133a2978c8dcbbd9f7d7b84cef20f84ed36ffda/posts/md_1643327843943/img/1__IYWLAcAZKwqIPUpv4Fdsww.png)
-
 If you love Vue, you might be thinking about using it with your static sites. But there are so many options between VuePress, Nuxt, and Gridsome — how should you pick? Here’s why I chose Gridsome as my Vue framework for a recent project.
 
 ### What is a static site?
@@ -59,7 +57,7 @@ This site is (obviously) not done — in need of content and some work to ma
 
 However, I was able to build and deploy it in a weekend, using a pre-made theme, thanks to Gridsome.
 
-[**Test | Garner Engineering**  
+[**Test | Garner Engineering**
 _Get Started Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et…_compassionate-brattain-d18b0b.netlify.app](https://compassionate-brattain-d18b0b.netlify.app/ "https://compassionate-brattain-d18b0b.netlify.app/")[](https://compassionate-brattain-d18b0b.netlify.app/)
 
 #### About Bennett

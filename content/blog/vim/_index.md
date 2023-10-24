@@ -11,8 +11,6 @@ slug: /@bennettgarner/developers-you-should-learn-vim-9f05b2016307
 
 The most productive developers I know all have something in common. They know how to use Vim.
 
-![](/Users/bennettgarner/Repos/medium-export-4b46aa4e91f20dbf349cd1ed9133a2978c8dcbbd9f7d7b84cef20f84ed36ffda/posts/md_1643327843943/img/1____vYlN6CNpdtcf530sU__biQ.png)
-
 I’m not telling you to switch to using Vim all the time (although you could). But in this article, I’ll argue why learning a 30-year-old text editor is important if you want to get good at software development.
 
 ### The Case for Vim
@@ -154,7 +152,7 @@ Beyond plugins, you can tweak anything else you can think of in your `vimrc` so 
 
 Wanna see my vimrc?
 
-[**bennett39/config**  
+[**bennett39/config**
 _Idea storage, resource bookmarks, discussion forum - bennett39/config_github.com](https://github.com/bennett39/config/blob/master/vim/vimrc "https://github.com/bennett39/config/blob/master/vim/vimrc")[](https://github.com/bennett39/config/blob/master/vim/vimrc)
 
 ### Editing Efficiently Matters

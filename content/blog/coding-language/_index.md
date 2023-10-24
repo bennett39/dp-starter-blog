@@ -12,17 +12,15 @@ slug: >-
 
 This has been my mantra recently. Don’t be loyal to the language you learned first or liked the best!
 
-![](/Users/bennettgarner/Repos/medium-export-4b46aa4e91f20dbf349cd1ed9133a2978c8dcbbd9f7d7b84cef20f84ed36ffda/posts/md_1643327843943/img/1__4TI__t4uzGM0UoBa87zdQ3w.png)
-
 Thanks to [Akshat Giri](https://medium.com/u/7715343b6bc) for the inspiration to write these thoughts out.
 
 ### Things you’ll learn when you work on a new language:
 
-*   Review your fundamentals — iterators, variable scope, control flow. Most languages are similar, but the differences can point out intricacies in how your language’s compiler works and what’s going on beneath the hood. You’re a better dev when you learn that stuff.  
+*   Review your fundamentals — iterators, variable scope, control flow. Most languages are similar, but the differences can point out intricacies in how your language’s compiler works and what’s going on beneath the hood. You’re a better dev when you learn that stuff.
     Also, [fluency in programming comes with repetition](https://blog.usejournal.com/consider-yourself-a-developer-you-should-solve-the-project-euler-problems-ed8d13397c9c). Thinking of the code should be the hard part. Writing it should be easy. The more languages you know, the more writing the code is trivial and thinking is the real work.
-*   Break your mental models — [I code in Python](https://medium.com/@BennettGarner/why-i-code-in-python-a1e4012eb859) most of the time, so when I switch to a statically typed language, like C, I have to think about completely different problems. “Is an `unsigned int` going to be enough storage or will I need an `unsigned long long`?”   
+*   Break your mental models — [I code in Python](https://medium.com/@BennettGarner/why-i-code-in-python-a1e4012eb859) most of the time, so when I switch to a statically typed language, like C, I have to think about completely different problems. “Is an `unsigned int` going to be enough storage or will I need an `unsigned long long`?” 
     Of course, Python is thinking about that and allocating space dynamically for me, but there’s value in being forced to think about it in a statically typed language.
-*   New paradigms — Following on the heels of the last point, sometimes a new language will completely flip your mental models about programming upside down. If you learn Haskell, for example, you’re going to have to discover functional programming. You’ll use recursion a lot more, and you won’t be able to reassign variables.  
+*   New paradigms — Following on the heels of the last point, sometimes a new language will completely flip your mental models about programming upside down. If you learn Haskell, for example, you’re going to have to discover functional programming. You’ll use recursion a lot more, and you won’t be able to reassign variables.
     Learning Haskell, even if you won’t use it in your work, fundamentally changes [the way you think about code](https://blog.usejournal.com/the-pragmatic-programmer-is-essential-reading-for-software-developers-443940b8ef9f). When you return to other languages, you’ll approach problems more creatively with functional programming in your toolkit.
 *   Get exposure to all kinds of new libraries — When you learn a new language, you get new tools and toys to go along with it. A whole world of data science and machine learning opens up to you if you learn Python, for instance. Learning Java (or more recently, Kotlin) gets you into Android app development. Working in C or C++ gets you into the interesting world of embedded systems and high-speed computations where performance matters.
 

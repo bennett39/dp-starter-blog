@@ -11,8 +11,6 @@ slug: /@bennettgarner/what-your-messy-code-is-costing-you-3317e419df3a
 
 Right now, naming that variable or building that helper function doesn’t seem critical… but messiness will catch up with you over the long haul.
 
-![](/Users/bennettgarner/Repos/medium-export-4b46aa4e91f20dbf349cd1ed9133a2978c8dcbbd9f7d7b84cef20f84ed36ffda/posts/md_1643327843943/img/1__VTBnsH3k7q7nSb5EpNnkZg.png)
-
 ### The Cost of a Mess
 
 I’m currently reading Robert C. Martin’s _Clean Code_. It’s a book that has become a touchstone in software development because it focuses on a problem so many developers have encountered: messy code bases and how they get that way.
@@ -76,7 +74,7 @@ That said, there are resources for you online and in print to help you on your j
 
 _The Pragmatic Programmer_ is another great resource.
 
-[**“The Pragmatic Programmer” Is Essential Reading for Software Developers**  
+[**“The Pragmatic Programmer” Is Essential Reading for Software Developers**
 _Writing code is a craft. Practice your skills and sharpen your tools to be the best programmer you can be._blog.usejournal.com](https://blog.usejournal.com/the-pragmatic-programmer-is-essential-reading-for-software-developers-443940b8ef9f "https://blog.usejournal.com/the-pragmatic-programmer-is-essential-reading-for-software-developers-443940b8ef9f")[](https://blog.usejournal.com/the-pragmatic-programmer-is-essential-reading-for-software-developers-443940b8ef9f)
 
 ### One Simple Rule to Get You Started

@@ -12,8 +12,6 @@ slug: >-
 
 Writing down how and why you solved coding problems every day will make it easier to start the next day, reveal hurdles in your workflow, and track your growth as a developer.
 
-![](/Users/bennettgarner/Repos/medium-export-4b46aa4e91f20dbf349cd1ed9133a2978c8dcbbd9f7d7b84cef20f84ed36ffda/posts/md_1643327843943/img/1__tlPDGNW6WJUI9MYyv6__mAw.png)
-
 I started keeping a daily log of my coding activity as part of my #100DaysOfCode challenge. It has fundamentally changed the way I work.
 
 I’m more focused at the beginning of my coding sessions, more consistent about committing to git, more thoughtful about why I do things a certain way, and more cognizant of inefficiencies that are slowing me down.

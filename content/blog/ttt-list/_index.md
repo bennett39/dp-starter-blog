@@ -7,8 +7,6 @@ keywords: []
 slug: /@bennettgarner/the-tic-tac-toe-series-master-list-a4a908f015f9
 ---
 
-![](/Users/bennettgarner/Repos/medium-export-4b46aa4e91f20dbf349cd1ed9133a2978c8dcbbd9f7d7b84cef20f84ed36ffda/posts/md_1643327843943/img/1__GVaMkVArtldl7uX6AIHo7Q.png)
-
 I’ve written a series of posts where we build an increasingly-complex tic-tac-toe game from scratch, one step at a time.
 
 The genesis post where I explain my philosophy behind the series:

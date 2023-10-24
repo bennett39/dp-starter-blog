@@ -11,8 +11,6 @@ slug: /@bennettgarner/getting-started-with-graphql-its-pretty-easy-3ea803426298
 
 Many companies have switched over to GraphQL to build their APIs. There’s good reason — it’s a revolutionary way of thinking about how we fetch data.
 
-![](/Users/bennettgarner/Repos/medium-export-4b46aa4e91f20dbf349cd1ed9133a2978c8dcbbd9f7d7b84cef20f84ed36ffda/posts/md_1643327843943/img/1__yzuJnF3vENKW9BEPTBp65Q.png)
-
 ### GraphQL’s origins & why use it
 
 GraphQL comes from Facebook. Internally, Facebook was looking for a way to make their newsfeed load more reliably on mobile.
@@ -56,24 +54,24 @@ Let’s imagine we have a database that has flight and passenger information.
 
 In GraphQL, we might query a flight like this:
 
-{  
-  flight(id: "1234") {  
-    origin  
-    destination  
-  }  
+{
+  flight(id: "1234") {
+    origin
+    destination
+  }
 }
 
 That’s GraphQL’s way of saying, “give me the origin and destination of flight 1234”
 
 In response, we’ll receive:
 
-{  
-  "data": {  
-    "flight": {  
-      "origin": "DFW",  
-      "destination": "MKE"  
-    }  
-  }  
+{
+  "data": {
+    "flight": {
+      "origin": "DFW",
+      "destination": "MKE"
+    }
+  }
 }
 
 Notice:
@@ -85,36 +83,36 @@ These are the hallmarks of a GraphQL API. It’s what makes GraphQL so fast and 
 
 That’s not all we can do, though. Let’s say we want to get passenger information on the flight:
 
-{  
-  flight(id: "1234") {  
-    origin  
-    destination  
-    passengers {  
-      name  
-    }  
-  }  
+{
+  flight(id: "1234") {
+    origin
+    destination
+    passengers {
+      name
+    }
+  }
 }
 
 Now, GraphQL will traverse the graph of relationships between this flight and its passengers. We’ll get a list of passengers in return:
 
-{  
-  "data": {  
-    "flight": {  
-      "origin": "DFW",  
-      "destination": "MKE",  
-      "passengers": \[  
-        {  
-          "name": "Luke Skywalker"  
-        },  
-        {  
-          "name": "Han Solo"  
-        },  
-        {  
-          "name": "R2-D2"  
-        }  
-      \]  
-    }  
-  }  
+{
+  "data": {
+    "flight": {
+      "origin": "DFW",
+      "destination": "MKE",
+      "passengers": \[
+        {
+          "name": "Luke Skywalker"
+        },
+        {
+          "name": "Han Solo"
+        },
+        {
+          "name": "R2-D2"
+        }
+      \]
+    }
+  }
 }
 
 Cool, so now we can immediately see all the passengers on this flight with a single API call.
@@ -123,39 +121,39 @@ Why Han, Luke, and R2 are flying domestic is a bigger question, but I hear Milwa
 
 Because GraphQL interprets data as a graph, we can traverse it the other direction, too.
 
-{  
-  person(name: "Luke Skywalker") {  
-    passport\_number  
-    flights {  
-      id  
-      date  
-      origin  
-      destination  
-   }  
+{
+  person(name: "Luke Skywalker") {
+    passport\_number
+    flights {
+      id
+      date
+      origin
+      destination
+   }
 }
 
 And now we can see what flights Luke has booked:
 
-{  
-  "data": {  
-    "person": {  
-      "passport\_number": 78120935,  
-      "flights": \[  
-        {  
-          "id": "1234",  
-          "date": "2019-05-24",  
-          "origin": "DFW",  
-          "destination": "MKE"  
-        },  
-        {  
-          "id": "2621",  
-          "date": "2019-07-05",  
-          "origin": "MKE",  
-          "destination": "DFW"  
-        }  
-      \]  
-    }  
-  }  
+{
+  "data": {
+    "person": {
+      "passport\_number": 78120935,
+      "flights": \[
+        {
+          "id": "1234",
+          "date": "2019-05-24",
+          "origin": "DFW",
+          "destination": "MKE"
+        },
+        {
+          "id": "2621",
+          "date": "2019-07-05",
+          "origin": "MKE",
+          "destination": "DFW"
+        }
+      \]
+    }
+  }
 }
 
 Wow, he’s going to be in Milwaukee for more than a month! I wonder what he’s doing there?
@@ -190,37 +188,37 @@ Let’s build a barebones Express server. Start by intializing npm:
 
 $ npm init
 
-This utility will walk you through creating a package.json file.  
+This utility will walk you through creating a package.json file.
 It only covers the most common items, and tries to guess sensible defaults.
 
-See \`npm help json\` for definitive documentation on these fields  
+See \`npm help json\` for definitive documentation on these fields
 and exactly what they do.
 
-Use \`npm install <pkg>\` afterwards to install a package and  
+Use \`npm install <pkg>\` afterwards to install a package and
 save it as a dependency in the package.json file.
 
-Press ^C at any time to quit.  
-package name: (graphql-medium)   
-version: (1.0.0)   
-description:   
-entry point: (index.js)   
-test command:   
-git repository:   
-keywords:   
-author:   
-license: (ISC)   
+Press ^C at any time to quit.
+package name: (graphql-medium)
+version: (1.0.0)
+description:
+entry point: (index.js)
+test command:
+git repository:
+keywords:
+author:
+license: (ISC)
 About to write to /home/bennett/Repos/graphql-medium/package.json:
 
-{  
-  "name": "graphql-medium",  
-  "version": "1.0.0",  
-  "description": "",  
-  "main": "index.js",  
-  "scripts": {  
-    "test": "echo \\"Error: no test specified\\" && exit 1"  
-  },  
-  "author": "",  
-  "license": "ISC"  
+{
+  "name": "graphql-medium",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \\"Error: no test specified\\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
 }
 
 Is this OK? (yes)
@@ -231,29 +229,29 @@ Next, let’s install Express, GraphQL, and Express-GraphQL library:
 
 $ npm install express express-graphql graphql
 
-npm notice created a lockfile as package-lock.json. You should commit this file.  
-npm WARN graphql-medium@1.0.0 No description  
+npm notice created a lockfile as package-lock.json. You should commit this file.
+npm WARN graphql-medium@1.0.0 No description
 npm WARN graphql-medium@1.0.0 No repository field.
 
-\+ express-graphql@0.8.0  
-\+ graphql@14.3.1  
-\+ express@4.17.0  
-added 53 packages from 38 contributors and audited 151 packages in 6.169s  
+\+ express-graphql@0.8.0
+\+ graphql@14.3.1
+\+ express@4.17.0
+added 53 packages from 38 contributors and audited 151 packages in 6.169s
 found 0 vulnerabilities
 
 Now, we’ll create a new file called `index.js` and create a new barebones Express server there:
 
 // index.js
 
-const express = require('express');  
+const express = require('express');
 const app = express();
 
-app.get('/', function(req, res) {  
-  res.send('Express is working!')  
+app.get('/', function(req, res) {
+  res.send('Express is working!')
 });
 
-app.listen(4000, function() {  
-  console.log('Listening on port 4000')  
+app.listen(4000, function() {
+  console.log('Listening on port 4000')
 });
 
 Try running `node index.js`. You should see a message “Listening on port 4000” and if you visit [http://localhost:4000/](http://localhost:4000/) then you’ll see “Express is working!”
@@ -264,7 +262,7 @@ We already installed the GraphQL npm package. Now, let’s use it.
 
 First, we need to import the necessary building blocks:
 
-const graphqlHTTP = require('express-graphql');  
+const graphqlHTTP = require('express-graphql');
 const { buildSchema } = require('graphql');
 
 Next, we’ll use those building blocks.
@@ -273,10 +271,10 @@ Let’s start by defining the schema of our GraphQL API. What should an incoming
 
 For now, let’s just define a hello world schema to get things working:
 
-let schema = buildSchema(\`  
-  type Query {  
-    hello: String  
-  }  
+let schema = buildSchema(\`
+  type Query {
+    hello: String
+  }
 \`);
 
 This simple schema lets GraphQL know that when someone sends a query for “hello”, we’re going to end up returning a string.
@@ -297,16 +295,16 @@ return 'Hello world!';
 
 However, we need to wrap that return statement inside a function that can get called multiple times, any time someone makes a query for hello:
 
-function() {  
-  return 'Hello world!';  
+function() {
+  return 'Hello world!';
 }
 
 Now, `hello` might not be the only query type we implement. In the future, we might also include “endpoints” for other functionality. So, we should make sure this function we just created is mapped to hello and saved in an object alongside all the other resolvers for our API.
 
-let root = {  
-  hello: function() {  
-    return 'Hello world!';  
-  },  
+let root = {
+  hello: function() {
+    return 'Hello world!';
+  },
 }
 
 It’s convention to call the object that hold all the resolvers `root`, but you can call it whatever you want.
@@ -319,10 +317,10 @@ We’ve now got everything in place for our GraphQL server. We just need to make
 
 In Express, we’ll create a new route to serve up the GraphQL api:
 
-app.use('/graphql', graphqlHTTP({  
-  schema: schema,  
-  rootValue: root,  
-  graphiql: true,  
+app.use('/graphql', graphqlHTTP({
+  schema: schema,
+  rootValue: root,
+  graphiql: true,
 }));
 
 Schema and root point to the variables we defined in steps 2 & 3.
@@ -340,24 +338,22 @@ We’re ready to test it out!
 
 You should see the graphiql interface:
 
-![](/Users/bennettgarner/Repos/medium-export-4b46aa4e91f20dbf349cd1ed9133a2978c8dcbbd9f7d7b84cef20f84ed36ffda/posts/md_1643327843943/img/1__Ljwn539rzdaPvucdt733Bg.png)
-
 We can now use this interface to make sure our API is working!
 
 Let’s write a query. This one is going to be super simple. We always wrap our GraphQL queries in curly braces. Then, we specify the schema object we’re querying followed by any attributes we want to fetch.
 
 In this case, there’s only one thing in our API to fetch so far:
 
-{  
-  hello  
+{
+  hello
 }
 
 If you click the submit button, you’ll see:
 
-{  
-  "data": {  
-    "hello": "Hello world!"  
-  }  
+{
+  "data": {
+    "hello": "Hello world!"
+  }
 }
 
 It’s working!

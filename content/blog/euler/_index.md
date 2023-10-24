@@ -10,8 +10,6 @@ slug: >-
   /@bennettgarner/consider-yourself-a-developer-you-should-solve-the-project-euler-problems-ed8d13397c9c
 ---
 
-![](/Users/bennettgarner/Repos/medium-export-4b46aa4e91f20dbf349cd1ed9133a2978c8dcbbd9f7d7b84cef20f84ed36ffda/posts/md_1643327843943/img/1__0NtkTQD8trRauRfEU2Nmhg.png)
-
 I’m going to make a bold claim: every developer (and aspiring developer) should solve the first 50 [Project Euler problems](https://projecteuler.net/archives).
 
 The benefits of working on the Project Euler problems are too great to ignore:
@@ -24,8 +22,6 @@ The benefits of working on the Project Euler problems are too great to ignore:
 In this quick (<5 minute read) article, I’ll make my case for why you should solve the Project Euler problems in every programming language you want to learn.
 
 ### Start with the fundamentals
-
-![](/Users/bennettgarner/Repos/medium-export-4b46aa4e91f20dbf349cd1ed9133a2978c8dcbbd9f7d7b84cef20f84ed36ffda/posts/md_1643327843943/img/1__pcJLGFtzjuKj2gduQO5ONA.jpeg)
 
 Vince Lombardi, the legendary American football coach, would start every pre-season training with a (now famous) speech:
 
@@ -88,8 +84,6 @@ If you want to add something impressive to your portfolio, start a GitHub reposi
 When you complete a solution, check your variable and function names to make sure they’re intuitive, remove any code you don’t need, and format everything beautifully and consistently.
 
 Next, add comments about why you made the decisions you did in your code. [Learning to write good comments is a skill](https://medium.com/@BennettGarner/youre-commenting-your-code-too-much-and-other-controversial-thoughts-on-documentation-1ee617ed46af). A good rule of thumb: any good developer can figure out WHAT your code does, so your comments should explain WHY it does it that way.
-
-![](/Users/bennettgarner/Repos/medium-export-4b46aa4e91f20dbf349cd1ed9133a2978c8dcbbd9f7d7b84cef20f84ed36ffda/posts/md_1643327843943/img/1__GPkJfAn4SyEwyxClJb7jhg.png)
 
 Another great opportunity with Project Euler is to learn unit testing. Add a minimal testing framework to your projects and write tests before you write the solution. This is a great way to get started with Test Driven Development.
 

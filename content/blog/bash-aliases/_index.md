@@ -7,8 +7,6 @@ keywords: []
 slug: /@bennettgarner/5-useful-bash-aliases-to-make-you-more-productive-12c04b550479
 ---
 
-![](/Users/bennettgarner/Repos/medium-export-4b46aa4e91f20dbf349cd1ed9133a2978c8dcbbd9f7d7b84cef20f84ed36ffda/posts/md_1643327843943/img/1__0xwHLwFv3YO6HbYNs7G__kw.jpeg)
-
 The best developers I know all maintain a list of Bash aliases to make their lives easier. It’s one of the signs of a good developer — how much can you automate the tasks you do repeatedly?
 
 Bash aliases are super easy to create, too! It’s low-hanging fruit to reduce your time, typing, and mental energy while coding. In this post, I’ll explain why every developer should have a list of aliases, how to do it, and the ten I’ve found most useful.
@@ -29,8 +27,8 @@ Convinced? Read on!
 
 The syntax for creating an alias is `alias foo="< command >"`. You can try it right now on the command line!
 
-$ alias foo="echo 'I pity the foo'"  
-$ foo  
+$ alias foo="echo 'I pity the foo'"
+$ foo
 I pity the foo
 
 Here, I created an alias for a Mr. T quote. (If you haven’t seen the Rocky movies, then what are you doing?!?)
@@ -81,12 +79,10 @@ This command enables colors, columns, symlinks, and other nice features of `ls`.
 
 When I need more detail, I use my other `ls` aliases (BONUS aliases!):
 
-alias la='ls -ahG'  
+alias la='ls -ahG'
 alias ll='ls -ahlG'
 
 Here’s the output in a sample directory:
-
-![](/Users/bennettgarner/Repos/medium-export-4b46aa4e91f20dbf349cd1ed9133a2978c8dcbbd9f7d7b84cef20f84ed36ffda/posts/md_1643327843943/img/1__rur8DcOv4m__lbjukSrmC6g.png)
 
 #### 5\. Making directories
 

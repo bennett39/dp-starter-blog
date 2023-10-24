@@ -12,8 +12,6 @@ slug: >-
 
 If you’re a developer that always uses the first variable name that comes to mind, you’re probably making your code hard to read, use, and maintain.
 
-![](/Users/bennettgarner/Repos/medium-export-4b46aa4e91f20dbf349cd1ed9133a2978c8dcbbd9f7d7b84cef20f84ed36ffda/posts/md_1643327843943/img/1__tFyjCV0Q8jlR3ZAWdQcfYA.png)
-
 ### Motivation: Why Naming Matters
 
 As developers, we’re constantly naming things. Variables, functions, classes, and modules all need names. You likely don’t think about it, but a major portion of a developer’s workflow is choosing and using names for abstractions.

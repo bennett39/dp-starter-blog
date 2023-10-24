@@ -68,8 +68,6 @@ The goal here is to prompt the user to select a square in order to make a move i
 
 To do so, we’ll want the user to select one of the nine available squares on the board:
 
-![](/Users/bennettgarner/Repos/medium-export-4b46aa4e91f20dbf349cd1ed9133a2978c8dcbbd9f7d7b84cef20f84ed36ffda/posts/md_1643327843943/img/1__QFXmQSXzcDZjd5aatJ6mMw.png)
-
 Cool, so we just need to get a number from the user! Not too hard.
 
 Python makes it really easy to get user input. Let’s quickly implement an input statement and save the user’s response as a variable.
@@ -86,9 +84,9 @@ selection = input("Select a square: ")
 
 Let’s see how it works!
 
-\>>> selection = input("Select a square: ")  
-Select a square: 1  
-\>>> print(selection)  
+\>>> selection = input("Select a square: ")
+Select a square: 1
+\>>> print(selection)
 1
 
 It looks like it’s working! But is it doing what we want it to?
@@ -99,39 +97,39 @@ We need to dig a little deeper in our next mini-step.
 
 Let’s go back to the code we just ran:
 
-\>>> selection = input("Select a square: ")  
-Select a square: 1  
-\>>> print(selection)  
+\>>> selection = input("Select a square: ")
+Select a square: 1
+\>>> print(selection)
 1
 
 Just looking at it, `selection` certainly looks like a number, but is it?
 
 If it’s a number, we should be able to add to it:
 
-\>>> selection + 1  
-Traceback (most recent call last):  
-  File "<stdin>", line 1, in <module>  
+\>>> selection + 1
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
 TypeError: must be str, not int
 
 Ouch, TypeError. And weird debug message “must be str, not int” — what does that mean?
 
 Let’s try another mini-experiment (that’s how you learn new things after all!):
 
-\>>> selection == 1  
+\>>> selection == 1
 False
 
 How can that be? We just saw that selection was “1”, how come it doesn’t `== 1` ?
 
 Well, the traceback above told us we have a TypeError, so let’s check on the type of `selection`:
 
-\>>> type(selection)  
+\>>> type(selection)
 <class 'str'>
 
 Hmmm, so `selection` is a string, not a number! That’s our problem. Let’s do the equality check again:
 
-\>>> selection == 1  
-False  
-\>>> selection == '1'  
+\>>> selection == 1
+False
+\>>> selection == '1'
 True
 
 For those of you who clicked the link to the `[input](https://docs.python.org/3/library/functions.html#input)` [documentation](https://docs.python.org/3/library/functions.html#input) that I shared above, you’re not surprised. `input` always returns a string!
@@ -146,11 +144,11 @@ If you want to convert a string into an integer, you’ll have to do some [type 
 
 …
 
-\>>> selection = int(input("Select a square: "))  
-Select a square: 1  
-\>>> selection == 1  
-True  
-\>>> type(selection)  
+\>>> selection = int(input("Select a square: "))
+Select a square: 1
+\>>> selection == 1
+True
+\>>> type(selection)
 <class 'int'>
 
 ### Mini-step #3: Validate 1–9
@@ -173,33 +171,33 @@ So, how should we check that the user’s input falls between 1–9, inclusive?
 
 My idea is a simple if statement:
 
-selection = int(input("Select a square: "))  
-if selection > 9 or selection < 1:  
-    print("Sorry, please select a number 1-9.")  
-else:  
+selection = int(input("Select a square: "))
+if selection > 9 or selection < 1:
+    print("Sorry, please select a number 1-9.")
+else:
     print(selection)
 
 Try it:
 
-$ python ttt.py   
-\['\_', '\_', '\_'\]  
-\['\_', '\_', '\_'\]  
-\['\_', '\_', '\_'\]  
-Select a square: 1  
+$ python ttt.py
+\['\_', '\_', '\_'\]
+\['\_', '\_', '\_'\]
+\['\_', '\_', '\_'\]
+Select a square: 1
 1
 
-$ python ttt.py   
-\['\_', '\_', '\_'\]  
-\['\_', '\_', '\_'\]  
-\['\_', '\_', '\_'\]  
-Select a square: 10  
+$ python ttt.py
+\['\_', '\_', '\_'\]
+\['\_', '\_', '\_'\]
+\['\_', '\_', '\_'\]
+Select a square: 10
 Sorry, please select a number 1-9.
 
-$ python ttt.py   
-\['\_', '\_', '\_'\]  
-\['\_', '\_', '\_'\]  
-\['\_', '\_', '\_'\]  
-Select a square: -1  
+$ python ttt.py
+\['\_', '\_', '\_'\]
+\['\_', '\_', '\_'\]
+\['\_', '\_', '\_'\]
+Select a square: -1
 Sorry, please select a number 1-9.
 
 Great, it’s working! We’ll decide what to do with those invalid selections later — maybe we can re-prompt the user somehow instead of having the program shut down?
@@ -210,15 +208,15 @@ Before we decide what to do with the invalid number selections, we have a bigger
 
 What happens if the user inputs something that’s not a number at all?
 
-$ python ttt.py   
-\['\_', '\_', '\_'\]  
-\['\_', '\_', '\_'\]  
-\['\_', '\_', '\_'\]  
+$ python ttt.py
+\['\_', '\_', '\_'\]
+\['\_', '\_', '\_'\]
+\['\_', '\_', '\_'\]
 Select a square: a
 
-Traceback (most recent call last):  
-  File "ttt.py", line 11, in <module>  
-    selection = int(input("Select a square: "))  
+Traceback (most recent call last):
+  File "ttt.py", line 11, in <module>
+    selection = int(input("Select a square: "))
 ValueError: invalid literal for int() with base 10: 'a'
 
 Uh oh, ValueError and our application crashes!
@@ -237,13 +235,13 @@ If you’re new to Python error handling, check out the official documentation o
 
 …
 
-try:  
-    selection = int(input("Select a square: "))  
-    if selection > 9 or selection < 1:  
-        print("Sorry, please select a number 1-9.")  
-    else:  
-        print(selection)  
-except ValueError:  
+try:
+    selection = int(input("Select a square: "))
+    if selection > 9 or selection < 1:
+        print("Sorry, please select a number 1-9.")
+    else:
+        print(selection)
+except ValueError:
     print("Sorry, that's not a number!")
 
 We take the exact same code as before, but we place it under a `try` block, so that we can handle the errors that get raised without them crashing the program.
@@ -268,12 +266,12 @@ Lucky for us, Python allows us to easily raise new Errors using the `[raise](htt
 
 The code cleans up to this:
 
-try:  
-    selection = int(input("Select a square: "))  
-    if not 1 <= selection <= 9:  
-        raise ValueError  
-    print(selection)  
-except ValueError:  
+try:
+    selection = int(input("Select a square: "))
+    if not 1 <= selection <= 9:
+        raise ValueError
+    print(selection)
+except ValueError:
     print("Sorry, please select a number 1-9")
 
 Notice how I also changed around the comparison operator. Chained comparisons are faster, are considered more Pythonic, and I also think they’re easier to read.
@@ -294,27 +292,27 @@ Any time there’s something we do repeatedly, that’s a good candidate for fac
 
 Here’s the new refactored application:
 
-\# ttt.py  
-  
-def print\_board(board):  
-    for row in board:  
-        print(row)  
-  
-  
-def select\_square():  
-    selection = int(input("Select a square: "))  
-    if not 1 <= selection <= 9:  
-        raise ValueError  
-    return selection  
-  
-  
-board = \[\["\_" for \_ in range(3)\] for \_ in range(3)\]  
-print\_board(board)  
-try:  
-    selection = select\_square()  
-except ValueError:  
-    print("Sorry, please select a number 1-9")  
-    # TODO - Find a way to re-prompt the user here  
+\# ttt.py
+
+def print\_board(board):
+    for row in board:
+        print(row)
+
+
+def select\_square():
+    selection = int(input("Select a square: "))
+    if not 1 <= selection <= 9:
+        raise ValueError
+    return selection
+
+
+board = \[\["\_" for \_ in range(3)\] for \_ in range(3)\]
+print\_board(board)
+try:
+    selection = select\_square()
+except ValueError:
+    print("Sorry, please select a number 1-9")
+    # TODO - Find a way to re-prompt the user here
 \# TODO - Use selection to update the board (tomorrow's task)
 
 It’s best practice in software development that each function should do only one thing. By refactoring out `select_square()` we may have made our application a few lines longer, but now it’s more readable and extensible in the future.
@@ -334,14 +332,14 @@ Today, I learned:
 *   Chained comparisons are faster because the middle value only needs to be evaluated once. In terms of style, they’re more Pythonic. They’re also not available in all languages. Python is special!
 *   When you get a `TypeError` during addition, the error message assumes that the first data type you provided is what you want to match. Thus, these equivalent statements produce different error messages:
 
-\>>> 'abc' + 1  
-Traceback (most recent call last):  
-  File "<stdin>", line 1, in <module>  
+\>>> 'abc' + 1
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
 TypeError: must be str, not int
 
-\>>> 1 + 'abc'  
-Traceback (most recent call last):  
-  File "<stdin>", line 1, in <module>  
+\>>> 1 + 'abc'
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
 TypeError: unsupported operand type(s) for +: 'int' and 'str'
 
 That’s why the TypeError message was strange when we tried `selection + 1`, earlier.

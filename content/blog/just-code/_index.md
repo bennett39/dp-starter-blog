@@ -8,8 +8,6 @@ slug: >-
   /@bennettgarner/think-software-engineers-just-write-code-think-again-aa9efeb0876f
 ---
 
-![](/Users/bennettgarner/Repos/medium-export-4b46aa4e91f20dbf349cd1ed9133a2978c8dcbbd9f7d7b84cef20f84ed36ffda/posts/md_1643327843943/img/1__yCuXkBbkJxSkw6iI8ohrhw.jpeg)
-
 Some coders do the bare minimum: write code that meets the requirements. However, great software engineers know their job involves much more than writing code.
 
 If you want to be a great engineer (and get ahead in your career), it pays to know all the “hidden” work that goes into being good at your job. In fact, for most top engineers, writing code is just one small piece of their overall job.
@@ -17,8 +15,6 @@ If you want to be a great engineer (and get ahead in your career), it pays to kn
 Unfortunately, most of this work is never taught or talked about formally when you’re learning to code. That’s a shame, but in this article I’ll show you all the “hidden” work great engineers are doing to build awesome products, and careers!
 
 ### Coders vs. Engineers
-
-![](/Users/bennettgarner/Repos/medium-export-4b46aa4e91f20dbf349cd1ed9133a2978c8dcbbd9f7d7b84cef20f84ed36ffda/posts/md_1643327843943/img/1__0LVbhU4qHE3I06kXf5DsmA.jpeg)
 
 Software developers generally fall into two groups: coders vs engineers
 
@@ -49,8 +45,6 @@ Most companies have testing standards for new code. In order to be merged, the n
 Decent coders will throw together a quick set of tests that check the happy paths work as specified in the requirements.
 
 Great engineers will think of edge cases and larger scenarios where the code might produce unexpected results. The best engineers write really robust tests (and they often practice test-driven development).
-
-![](/Users/bennettgarner/Repos/medium-export-4b46aa4e91f20dbf349cd1ed9133a2978c8dcbbd9f7d7b84cef20f84ed36ffda/posts/md_1643327843943/img/1__rQlxM7__sKraqzw955ghOTw.jpeg)
 
 #### 3\. Consider user experience (UX)
 

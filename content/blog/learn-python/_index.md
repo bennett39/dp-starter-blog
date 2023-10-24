@@ -19,8 +19,6 @@ The real challenge is letting go of those tutorials and charting your own course
 
 ### Learning a language is like learning to swim
 
-![](/Users/bennettgarner/Repos/medium-export-4b46aa4e91f20dbf349cd1ed9133a2978c8dcbbd9f7d7b84cef20f84ed36ffda/posts/md_1643327843943/img/1__IglA9L2UVxxFB37dN8bydA.jpeg)
-
 Before I learned to swim, I’d always stay in the shallow end of the pool. Or, I would hold on to the edge of the pool the entire time I was in the deep end.
 
 I quickly learned that you don’t learn to swim by holding on to the edge! You have to spend time away from the edge before you’ll ever learn.

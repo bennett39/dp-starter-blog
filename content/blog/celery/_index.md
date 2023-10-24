@@ -10,8 +10,6 @@ slug: >-
   /@bennettgarner/python-developers-celery-is-a-must-learn-technology-heres-how-to-get-started-578f5d63fab3
 ---
 
-![](/Users/bennettgarner/Repos/medium-export-4b46aa4e91f20dbf349cd1ed9133a2978c8dcbbd9f7d7b84cef20f84ed36ffda/posts/md_1643327843943/img/1__2kVzaUMFISXxe7E0pQRJPA.png)
-
 When you work on data-intensive applications, long-running tasks can seriously slow down your users.
 
 Modern users expect pages to load instantaneously, but data-heavy tasks may take many seconds or even minutes to complete. How can we make sure users have a fast experience while still completing complicated tasks?
@@ -22,8 +20,6 @@ If we want users to experience fast load times in our application, we’ll need 
 
 #### Workers
 
-![](/Users/bennettgarner/Repos/medium-export-4b46aa4e91f20dbf349cd1ed9133a2978c8dcbbd9f7d7b84cef20f84ed36ffda/posts/md_1643327843943/img/1__k7QKEzN__pSuuuPbcBCjYmQ.jpeg)
-
 One way we do this is with asynchronicity. While the webserver loads the next page, a second server is doing the computations that we need in the background.
 
 We call these background, task-based servers “workers.” While you typically only have one or a handful of web servers responding to user requests, you can have many worker servers that process tasks in the background.
@@ -31,8 +27,6 @@ We call these background, task-based servers “workers.” While you typically 
 These workers can then make changes in the database, update the UI via webhooks or callbacks, add items to the cache, process files, send emails, queue future tasks, and more! All while our main web server remains free to respond to user requests.
 
 #### Message Queues
-
-![](/Users/bennettgarner/Repos/medium-export-4b46aa4e91f20dbf349cd1ed9133a2978c8dcbbd9f7d7b84cef20f84ed36ffda/posts/md_1643327843943/img/1__vKEhTnrZ__Sal__05uoD6rOw.jpeg)
 
 We tell these workers what to do via a message queue. Put simply, a queue is a first-in, first-out data structure. When we store messages in a queue the first one we place in the queue will be the first to be processed. All tasks will be started in the order we add them.
 
@@ -64,8 +58,6 @@ However, these tasks will not run on our main Django webserver. Instead, Celery 
 Since we need that queue to be accessible to both the Django webserver (to add new tasks) and the worker servers (to pick up queued tasks), we’ll use an extra server that works as a message broker.
 
 That message broker server will use Redis — an in-memory data store — to maintain the queue of tasks.
-
-![](/Users/bennettgarner/Repos/medium-export-4b46aa4e91f20dbf349cd1ed9133a2978c8dcbbd9f7d7b84cef20f84ed36ffda/posts/md_1643327843943/img/1__oojFWFYyxKt9a2nJ__TvAqw.png)
 
 To recap: Django creates a task (Python function) and tells Celery to add it to the queue. Celery puts that task into Redis (freeing Django to continue working on other things). On a separate server, Celery runs workers that can pick up tasks. Those workers listen to Redis. When the new task arrives, one worker picks it up and processes it, logging the result back to Celery.
 
@@ -104,7 +96,7 @@ django-admin startproject celery\_tutorial
 
 Set up the models:
 
-cd celery\_tutorial/  
+cd celery\_tutorial/
 python manage.py migrate
 
 Make sure it works:
@@ -123,24 +115,24 @@ You should now be in the folder where `settings.py` is.
 
 We need to set up Celery with some config options. Create a new file called `celery.py` :
 
-from \_\_future\_\_ import absolute\_import, unicode\_literals  
-  
-import os  
-  
-from celery import Celery  
-  
-\# set the default Django settings module for the 'celery' program.  
-os.environ.setdefault('DJANGO\_SETTINGS\_MODULE', 'celery\_tutorial.settings')  
-  
-app = Celery('celery\_tutorial')  
-  
-\# Using a string here means the worker doesn't have to serialize  
-\# the configuration object to child processes.  
-\# - namespace='CELERY' means all celery-related configuration keys  
-\#   should have a \`CELERY\_\` prefix.  
-app.config\_from\_object('django.conf:settings', namespace='CELERY')  
-  
-\# Load task modules from all registered Django app configs.  
+from \_\_future\_\_ import absolute\_import, unicode\_literals
+
+import os
+
+from celery import Celery
+
+\# set the default Django settings module for the 'celery' program.
+os.environ.setdefault('DJANGO\_SETTINGS\_MODULE', 'celery\_tutorial.settings')
+
+app = Celery('celery\_tutorial')
+
+\# Using a string here means the worker doesn't have to serialize
+\# the configuration object to child processes.
+\# - namespace='CELERY' means all celery-related configuration keys
+\#   should have a \`CELERY\_\` prefix.
+app.config\_from\_object('django.conf:settings', namespace='CELERY')
+
+\# Load task modules from all registered Django app configs.
 app.autodiscover\_tasks()
 
 This file creates a Celery app using the Django settings from our project. The last line tells Celery to try to automatically discover a file called `tasks.py` in all of our Django apps.
@@ -149,12 +141,12 @@ Save that file.
 
 We also want Celery to start automatically whenever Django starts. So, update `__init__.py` in the same folder as `settings.py` and `celery.py` :
 
-from \_\_future\_\_ import absolute\_import, unicode\_literals  
-  
-\# This will make sure the app is always imported when  
-\# Django starts so that shared\_task will use this app.  
-from .celery import app as celery\_app  
-  
+from \_\_future\_\_ import absolute\_import, unicode\_literals
+
+\# This will make sure the app is always imported when
+\# Django starts so that shared\_task will use this app.
+from .celery import app as celery\_app
+
 \_\_all\_\_ = ('celery\_app',)
 
 Finally, we need to tell Celery how to find Redis. So, open `settings.py` and add this line:
@@ -167,8 +159,8 @@ If you have an existing Django project, you can now create a file called `tasks.
 
 For simplicity, though, we’re going to create our first task in `celery_tutorial/celery.py` , so re-open that file and add this to the bottom:
 
-@app.task(bind=True)  
-def debug\_task(self):  
+@app.task(bind=True)
+def debug\_task(self):
     print('Request: {0!r}'.format(self.request))
 
 This simple task just prints all the metadata about the request when the task is received.
@@ -191,8 +183,8 @@ python manage.py shell
 
 Let’s import the task and queue it up:
 
-\>>> from celery\_tutorial.celery import debug\_task  
-\>>> debug\_task.delay()  
+\>>> from celery\_tutorial.celery import debug\_task
+\>>> debug\_task.delay()
 <AsyncResult: fe261700-2160-4d6d-9d77-ea064a8a3727>
 
 We use `.delay()` to tell Celery to add the task to the queue.
@@ -211,29 +203,29 @@ celery -A celery\_tutorial.celery worker --loglevel=info
 
 You should see Celery start up, receive the task, print the answer, and update the task status to “SUCCESS”:
 
-\-------------- celery@Bennetts-MacBook-Pro.local v4.4.2 (cliffs)  
-\--- \*\*\*\*\* -----   
-\-- \*\*\*\*\*\*\* ---- macOS-10.15.3-x86\_64-i386-64bit 2020-04-18 20:41:52  
-\- \*\*\* --- \* ---   
-\- \*\* ---------- \[config\]  
-\- \*\* ---------- .> app:         celery\_tutorial:0x1107b5a90  
-\- \*\* ---------- .> transport:   redis://localhost:6379//  
-\- \*\* ---------- .> results:     disabled://  
-\- \*\*\* --- \* --- .> concurrency: 8 (prefork)  
-\-- \*\*\*\*\*\*\* ---- .> task events: OFF (enable -E to monitor tasks in this worker)  
-\--- \*\*\*\*\* -----   
- -------------- \[queues\]  
-                .> celery           exchange=celery(direct) key=celery  
-                  
-  
-\[tasks\]  
-  . celery\_tutorial.celery.debug\_task  
-  
-\[INFO/MainProcess\] Connected to redis://localhost:6379//  
-\[INFO/MainProcess\] mingle: searching for neighbors  
-\[2INFO/MainProcess\] mingle: all alone  
-  
-\[INFO/MainProcess\] Received task: celery\_tutorial.celery.debug\_task\[fe261700-2160-4d6d-9d77-ea064a8a3727\]  
+\-------------- celery@Bennetts-MacBook-Pro.local v4.4.2 (cliffs)
+\--- \*\*\*\*\* -----
+\-- \*\*\*\*\*\*\* ---- macOS-10.15.3-x86\_64-i386-64bit 2020-04-18 20:41:52
+\- \*\*\* --- \* ---
+\- \*\* ---------- \[config\]
+\- \*\* ---------- .> app:         celery\_tutorial:0x1107b5a90
+\- \*\* ---------- .> transport:   redis://localhost:6379//
+\- \*\* ---------- .> results:     disabled://
+\- \*\*\* --- \* --- .> concurrency: 8 (prefork)
+\-- \*\*\*\*\*\*\* ---- .> task events: OFF (enable -E to monitor tasks in this worker)
+\--- \*\*\*\*\* -----
+ -------------- \[queues\]
+                .> celery           exchange=celery(direct) key=celery
+
+
+\[tasks\]
+  . celery\_tutorial.celery.debug\_task
+
+\[INFO/MainProcess\] Connected to redis://localhost:6379//
+\[INFO/MainProcess\] mingle: searching for neighbors
+\[2INFO/MainProcess\] mingle: all alone
+
+\[INFO/MainProcess\] Received task: celery\_tutorial.celery.debug\_task\[fe261700-2160-4d6d-9d77-ea064a8a3727\]
 
 \[WARNING/ForkPoolWorker-8\] Request: <Context: {'lang': 'py', 'task': 'celery\_tutorial.celery.debug\_task', 'id': 'fe261700-2160-4d6d-9d77-ea064a8a3727', 'shadow': None, 'eta': None, 'expires': None, 'group': None, 'retries': 0, 'timelimit': \[None, None\], 'root\_id': 'fe261700-2160-4d6d-9d77-ea064a8a3727', 'parent\_id': None, 'argsrepr': '()', 'kwargsrepr': '{}', 'origin': 'gen3931@Bennetts-MacBook-Pro.local', 'reply\_to': 'f8232d33-d7ee-3912-814c-6d531e3e9259', 'correlation\_id': 'fe261700-2160-4d6d-9d77-ea064a8a3727', 'hostname': 'celery@Bennetts-MacBook-Pro.local', 'delivery\_info': {'exchange': '', 'routing\_key': 'celery', 'priority': 0, 'redelivered': None}, 'args': \[\], 'kwargs': {}, 'is\_eager': False, 'callbacks': None, 'errbacks': None, 'chain': None, 'chord': None, 'called\_directly': False, '\_protected': 1}>
 

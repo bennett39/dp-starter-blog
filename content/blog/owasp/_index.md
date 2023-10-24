@@ -10,8 +10,6 @@ slug: >-
   /@bennettgarner/top-10-web-app-security-risks-how-to-stop-them-according-to-the-experts-at-owasp-f568b881f406
 ---
 
-![](/Users/bennettgarner/Repos/medium-export-4b46aa4e91f20dbf349cd1ed9133a2978c8dcbbd9f7d7b84cef20f84ed36ffda/posts/md_1643327843943/img/1__v89LGRBm9fPHQwCKnSaZvA.jpeg)
-
 As a developer, you’re the first line of defense against data breaches. You should know what to look out for, and you have a responsibility to your users to follow best practices.
 
 Luckily, there’s an organization dedicated to providing you with up-to-date guidelines for how to secure your web applications. Every web developer should know about the OWASP Top Ten.
@@ -35,8 +33,6 @@ Websites need to accept data from their users. They wouldn’t be very useful ot
 However, before you do anything with that data (store it, execute code on it, use it to look something up, etc), you need to make sure it’s cleaned and escaped of special characters.
 
 If you don’t, attackers can potentially run their own code on your servers.
-
-![](/Users/bennettgarner/Repos/medium-export-4b46aa4e91f20dbf349cd1ed9133a2978c8dcbbd9f7d7b84cef20f84ed36ffda/posts/md_1643327843943/img/1__P4nj9fJjSeJ9__c0rwSZqlg.png)
 
 The best way to prevent injection is to use a library that sanitizes user entered data every time and as soon as user data hits your server. Every programming language for the web has tools & libraries to help sanitize inputs.
 
@@ -142,8 +138,6 @@ Basically, this attack involves running malicious JavaScript and HTML in the use
 
 For example, if a site you trusted opened a popup like this, would you fill it out?
 
-![](/Users/bennettgarner/Repos/medium-export-4b46aa4e91f20dbf349cd1ed9133a2978c8dcbbd9f7d7b84cef20f84ed36ffda/posts/md_1643327843943/img/1__cNNE6eY224iZ8SnKS__okLw.png)
-
 While it looks trustworthy, it may also have come from an attacker spoofing the design and features of the target site.
 
 Malicious XSS attacks come in 3 basic varieties:
@@ -186,8 +180,6 @@ Upgrading your dependencies will usually fix these vulnerabilities.
 
 In fact, source control providers like GitHub can help you monitor and prioritize these issues:
 
-![](/Users/bennettgarner/Repos/medium-export-4b46aa4e91f20dbf349cd1ed9133a2978c8dcbbd9f7d7b84cef20f84ed36ffda/posts/md_1643327843943/img/1__WkPHcHtEMzpQvW8oyryhIw.png)
-
 Furthermore, GitHub can automatically create a pull request to upgrade your dependencies.
 
 #### 10\. Insufficient Logging & Monitoring
@@ -200,7 +192,7 @@ Logging and monitoring is the foundation of security, because it allows you to t
 
 According to OWASP:
 
-> Most successful attacks start with vulnerability probing. Allowing such probes to continue can raise the likelihood of successful exploit to nearly 100%.  
+> Most successful attacks start with vulnerability probing. Allowing such probes to continue can raise the likelihood of successful exploit to nearly 100%.
 > In 2016, identifying a breach took an [average of 191 days](https://www-01.ibm.com/common/ssi/cgi-bin/ssialias?htmlfid=SEL03130WWEN&) — plenty of time for damage to be inflicted.
 
 Things to start monitoring today:

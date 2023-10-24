@@ -12,8 +12,6 @@ slug: >-
 
 Writing code is a craft. Practice your skills and sharpen your tools to be the best programmer you can be.
 
-![](/Users/bennettgarner/Repos/medium-export-4b46aa4e91f20dbf349cd1ed9133a2978c8dcbbd9f7d7b84cef20f84ed36ffda/posts/md_1643327843943/img/1__XQy__803Jds__GXJC0DADSPw.png)
-
 If you’ve spent any time working in or learning about software development, chances are you’ve heard of the classic book _The Pragmatic Programmer_ by Andrew Hunt and David Thomas.
 
 You likely know a lot of the stories and terms from the book. Hunt and Thomas introduced the world to [rubber duck debugging](https://en.wikipedia.org/wiki/Rubber_duck_debugging) and [code katas](https://en.wikipedia.org/wiki/Kata_%28programming%29). They also popularized ideas like [don’t repeat yourself](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) (DRY) and early iterations of what would come to be known as [agile development](https://en.wikipedia.org/wiki/Agile_software_development).
@@ -29,8 +27,6 @@ Along the way, I’ll summarize some of the key ideas from the book, but with 32
 ### Mindset
 
 You’d expect a book about coding to start by talking about code, but that’s not where Hunt and Thomas begin.
-
-![](/Users/bennettgarner/Repos/medium-export-4b46aa4e91f20dbf349cd1ed9133a2978c8dcbbd9f7d7b84cef20f84ed36ffda/posts/md_1643327843943/img/1__BYjUayTLYZUXVEgddclwGA.jpeg)
 
 Instead, they spend the first two chapters talking about philosophy, psychology, and approaches to coding. And rightly so. Before you can write beautiful code, you need to be thinking clearly, have clear expectations, and get buy-in from the people around you.
 
@@ -53,8 +49,6 @@ They’ve thought about how to think about software. This [meta-analysis of the 
 With all that meta-analysis out of the way, surely we’re ready to start actually talking about code?
 
 Not so fast! Any good craftsman knows that once you’ve made a plan you don’t immediately start working. First, you need to prepare your environment and your tools.
-
-![](/Users/bennettgarner/Repos/medium-export-4b46aa4e91f20dbf349cd1ed9133a2978c8dcbbd9f7d7b84cef20f84ed36ffda/posts/md_1643327843943/img/1__D8GQvRCXr0WWxJ8ClWPAHQ.jpeg)
 
 “[Sharpen the saw](https://en.wikipedia.org/wiki/The_7_Habits_of_Highly_Effective_People#7_-_Sharpen_the_Saw)” is the classic self-improvement quote from Stephen Covey’s canonical book, _The 7 Habits of Highly Effective People_.
 
@@ -112,5 +106,5 @@ Want my best content on web development and becoming a better programmer?
 
 [Join my free email series](https://mailchi.mp/2e671faffc04/bennett-medium).
 
-[**Free Email Series for Medium Readers | Bennett Garner**  
+[**Free Email Series for Medium Readers | Bennett Garner**
 _Join over 500 other developers currently in my email series._mailchi.mp](https://mailchi.mp/2e671faffc04/bennett-medium "https://mailchi.mp/2e671faffc04/bennett-medium")[](https://mailchi.mp/2e671faffc04/bennett-medium)

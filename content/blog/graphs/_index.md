@@ -14,8 +14,6 @@ slug: >-
 
 _Graphs are everywhere, all around you! But chances are you don’t really understand them._
 
-![](/Users/bennettgarner/Repos/medium-export-4b46aa4e91f20dbf349cd1ed9133a2978c8dcbbd9f7d7b84cef20f84ed36ffda/posts/md_1643327843943/img/1__NxT9a0rJJHZt1vvTXN0Eiw.png)
-
 For many self-taught devs, graphs can be intimidating and difficult to learn.
 
 For that matter, graphs can be baffling to experienced devs and computer science grads who haven’t worked with them for a while.
@@ -58,8 +56,6 @@ By far, the most common combination of these terms is vertex and edge. When you 
 
 ### Directed vs. Undirected
 
-![](/Users/bennettgarner/Repos/medium-export-4b46aa4e91f20dbf349cd1ed9133a2978c8dcbbd9f7d7b84cef20f84ed36ffda/posts/md_1643327843943/img/1__t9lHiQpKm__vdLp2Cadog7g.jpeg)
-
 Google Maps wouldn’t be very useful if its instructions told you to turn the wrong way down a one way street, would it?
 
 Sometimes edges of graphs need to point in a direction. When this is the case, we call it a directed graph. We use arrows when we draw a directed graph so everyone knows what we mean.
@@ -83,13 +79,9 @@ An acyclic graph, on the other hand, has no loops.
 
 For instance, this graph is acyclic because it has no loops. While the vertices are well-connected, they only go in one direction.
 
-![](/Users/bennettgarner/Repos/medium-export-4b46aa4e91f20dbf349cd1ed9133a2978c8dcbbd9f7d7b84cef20f84ed36ffda/posts/md_1643327843943/img/1__OhRJtkdSyST86__cDTrioIw.png)
-
 ### Weighted edges
 
 If we want to make our calculations more interesting when finding the shortest path, for instance, we can add weight to the edges of our graph.
-
-![](/Users/bennettgarner/Repos/medium-export-4b46aa4e91f20dbf349cd1ed9133a2978c8dcbbd9f7d7b84cef20f84ed36ffda/posts/md_1643327843943/img/1__FpM____G8JvbV__yMOaIjNChw.jpeg)
 
 Google uses weighting to take into account things like traffic when it gives you directions.
 

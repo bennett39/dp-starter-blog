@@ -7,8 +7,6 @@ keywords: []
 slug: /@bennettgarner/testing-django-admin-commands-36b7d1ebefe2
 ---
 
-![](/Users/bennettgarner/Repos/medium-export-4b46aa4e91f20dbf349cd1ed9133a2978c8dcbbd9f7d7b84cef20f84ed36ffda/posts/md_1643327843943/img/1__j5QuhIq67F0P3gmcbOxrOg.png)
-
 [Commands in Django](https://docs.djangoproject.com/en/3.2/howto/custom-management-commands/) allow you to write scripts for your application that you can run from the command line, using `manage.py`. Recently, I needed to write unit tests for custom Django commands.
 
 This is the quick guide I wish I’d found first thing…
@@ -27,7 +25,7 @@ For those reasons, we need unit tests for custom commands.
 
 It turns out that writing tests for a Django admin command is fairly easy (even if the steps are slightly buried in the documentation).
 
-[**Testing tools | Django documentation | Django**  
+[**Testing tools | Django documentation | Django**
 docs.djangoproject.com](https://docs.djangoproject.com/en/2.2/topics/testing/tools/#management-commands "https://docs.djangoproject.com/en/2.2/topics/testing/tools/#management-commands")[](https://docs.djangoproject.com/en/2.2/topics/testing/tools/#management-commands)
 
 Django provides a `call_command()` function in `django.core.management` that allows you to programmatically trigger a command from within your Python code.

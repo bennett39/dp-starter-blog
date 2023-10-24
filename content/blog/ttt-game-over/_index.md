@@ -10,8 +10,6 @@ slug: >-
   /@bennettgarner/tic-tac-toe-series-4-game-over-making-moves-permanent-23bca3b40ce0
 ---
 
-![](/Users/bennettgarner/Repos/medium-export-4b46aa4e91f20dbf349cd1ed9133a2978c8dcbbd9f7d7b84cef20f84ed36ffda/posts/md_1643327843943/img/1__cVqljhyEyo6P2aa8UWIyhw.png)
-
 I’m writing a series of posts where we build an increasingly-complex tic-tac-toe game from scratch, one step at a time.
 
 Right now, it’s pretty rudimentary. But eventually, we’ll use this tic-tac-toe game to incrementally explore all kinds of concepts in software development.
@@ -49,8 +47,8 @@ Luckily, we already have a `place_piece` function defined. We can add in a line 
 
 …
 
-def place\_piece(selection, is\_x, board):  
-    if board\[selection\[0\]\]\[selection\[1\]\] == "\_":  
+def place\_piece(selection, is\_x, board):
+    if board\[selection\[0\]\]\[selection\[1\]\] == "\_":
         board\[selection\[0\]\]\[selection\[1\]\] = "X" if is\_x else "O"
 
 We check that the square is empty before we place a piece there. That way, players can’t overwrite one another.
@@ -65,9 +63,9 @@ That’s hard to read and it’s not intuitive what’s happening. Imagine if yo
 
 Let’s make it more explicit and less repetitive:
 
-def place\_piece(selection, is\_x, board):  
-    i, j = selection  
-    if board\[i\]\[j\] == "\_":  
+def place\_piece(selection, is\_x, board):
+    i, j = selection
+    if board\[i\]\[j\] == "\_":
         board\[i\]\[j\] = "X" if is\_x else "O"
 
 ### Mini-step #2: Raise an error
@@ -84,26 +82,26 @@ Let’s make it so that the `place_piece` function raises a `ValueError` wheneve
 
 …
 
-def place\_piece(selection, is\_x, board):  
-    i, j = selection  
-    if board\[i\]\[j\] == "\_":  
-        board\[i\]\[j\] = "X" if is\_x else "O"  
-    else:  
+def place\_piece(selection, is\_x, board):
+    i, j = selection
+    if board\[i\]\[j\] == "\_":
+        board\[i\]\[j\] = "X" if is\_x else "O"
+    else:
         raise ValueError
 
 Now, if we look at the `main` function where `place_piece` gets called, we see that we already have it inside a `try` block:
 
-try:  
-    selection = convert\_selection(select\_square())  
-    place\_piece(selection, is\_x, board)  
-except ValueError:  
+try:
+    selection = convert\_selection(select\_square())
+    place\_piece(selection, is\_x, board)
+except ValueError:
     print("Sorry, please select a number 1-9")
 
 So, if we raise a ValueError in `place_piece` it will get handled along with the errors we already addressed in `select_quare` .
 
 One thing we should change, though, is the error message. We need to be more descriptive now that we’re adding a new ValueError.
 
-except ValueError:              
+except ValueError:
     print("Sorry, please select a square 1-9 that is unoccupied.")
 
 ### Mini-step #3: Turn forfeiture
@@ -128,8 +126,8 @@ Let’s fix that. See if you can find a way to not skip the player’s turn if t
 
 …
 
-except ValueError:              
-    print("Sorry, please select a square 1-9 that is unoccupied.")  
+except ValueError:
+    print("Sorry, please select a square 1-9 that is unoccupied.")
     continue
 
 Just by adding `continue` to the `except` block, we allow the player another shot at their turn.
@@ -154,28 +152,28 @@ Let’s create a new boolean `game_over` and a new function `is_draw(board)` . 
 
 …
 
-def main():  
-    board = \[\["\_" for \_ in range(3)\] for \_ in range(3)\]  
-    is\_x = True  
-    game\_over = False  
-    while not game\_over:  
-        print\_board(board)  
-        try:  
-            selection = convert\_selection(select\_square())  
-            place\_piece(selection, is\_x, board)  
-        except ValueError:  
-            print("Sorry, please select a square 1-9 that is unoccupied.")  
-            continue  
-        game\_over = is\_draw(board)  
+def main():
+    board = \[\["\_" for \_ in range(3)\] for \_ in range(3)\]
+    is\_x = True
+    game\_over = False
+    while not game\_over:
+        print\_board(board)
+        try:
+            selection = convert\_selection(select\_square())
+            place\_piece(selection, is\_x, board)
+        except ValueError:
+            print("Sorry, please select a square 1-9 that is unoccupied.")
+            continue
+        game\_over = is\_draw(board)
         is\_x = not is\_x
 
 ...
 
-def is\_draw(board):  
-    for row in board:  
-        for val in row:  
-            if val == "\_":  
-                return False  
+def is\_draw(board):
+    for row in board:
+        for val in row:
+            if val == "\_":
+                return False
     return True
 
 I initialize `game_over` to False and then update it at the end of every turn. I also changed the criteria of the `while` loop to stop looping when `game_over` is True.
@@ -186,12 +184,12 @@ Our application won’t run to infinity now!
 
 Let’s add a line to let the user know why the application quit:
 
-def is\_draw(board):  
-    for row in board:  
-        for val in row:  
-            if val == "\_":  
-                return False  
-    print("Draw! No more moves!")  
+def is\_draw(board):
+    for row in board:
+        for val in row:
+            if val == "\_":
+                return False
+    print("Draw! No more moves!")
     return True
 
 ### Mini-step #5: Check for a winner
@@ -210,26 +208,26 @@ See if you can write a function `is_win(board)` that returns False if there’s 
 
 Here’s my solution:
 
-def is\_win(board):  
-    winner = None  
-    for i in range(3):  
-        # horizontal  
-        if board\[i\]\[0\] == board\[i\]\[1\] == board\[i\]\[2\] and board\[i\]\[0\] != "\_":  
-            winner = board\[i\]\[0\]  
-            break  
-        # vertical  
-        if board\[0\]\[i\] == board\[1\]\[i\] == board\[2\]\[i\] and board\[0\]\[i\] != "\_":  
-            winner = board\[0\]\[i\]  
-            break  
-    # diagonal  
-    if board\[1\]\[1\] != "\_":  
-        if (board\[0\]\[0\] == board\[1\]\[1\] == board\[2\]\[2\]  
-            or board\[0\]\[2\] == board\[1\]\[1\] == board\[2\]\[0\]):  
-            winner = board\[1\]\[1\]  
-    if winner is not None:  
-        print\_board(board)  
-        print(f"{winner} is the winner!")  
-        return True  
+def is\_win(board):
+    winner = None
+    for i in range(3):
+        # horizontal
+        if board\[i\]\[0\] == board\[i\]\[1\] == board\[i\]\[2\] and board\[i\]\[0\] != "\_":
+            winner = board\[i\]\[0\]
+            break
+        # vertical
+        if board\[0\]\[i\] == board\[1\]\[i\] == board\[2\]\[i\] and board\[0\]\[i\] != "\_":
+            winner = board\[0\]\[i\]
+            break
+    # diagonal
+    if board\[1\]\[1\] != "\_":
+        if (board\[0\]\[0\] == board\[1\]\[1\] == board\[2\]\[2\]
+            or board\[0\]\[2\] == board\[1\]\[1\] == board\[2\]\[0\]):
+            winner = board\[1\]\[1\]
+    if winner is not None:
+        print\_board(board)
+        print(f"{winner} is the winner!")
+        return True
     return False
 
 I’ve hard coded the checks here because I don’t think we’ll expand the application to playing connect four or connect five or a bigger board in any way.

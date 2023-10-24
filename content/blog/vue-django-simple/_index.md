@@ -7,8 +7,6 @@ keywords: []
 slug: /@bennettgarner/vue-django-getting-started-88d3f4c2ba62
 ---
 
-![](/Users/bennettgarner/Repos/medium-export-4b46aa4e91f20dbf349cd1ed9133a2978c8dcbbd9f7d7b84cef20f84ed36ffda/posts/md_1643327843943/img/1__0Rk__6tH6IeSu8RjGEMRxYg.png)
-
 Adding Vue to an existing Django app is super easy, and a great way to enable more complex front-end features. In this post, we’ll see how to do it the easy way.
 
 ### Why Add Vue?
@@ -30,7 +28,7 @@ Vue is really cool and fairly easy to learn. It’s similar to [learning React](
 
 This isn’t a Vue tutorial, so to learn Vue you’ll want to visit the [official guide](https://vuejs.org/v2/guide/) (which is really well done and easy to follow).
 
-[**Introduction - Vue.js**  
+[**Introduction - Vue.js**
 _Vue.js - The Progressive JavaScript Framework_vuejs.org](https://vuejs.org/v2/guide/ "https://vuejs.org/v2/guide/")[](https://vuejs.org/v2/guide/)
 
 Let’s see how to add Vue to Django!
@@ -43,7 +41,7 @@ No worries — I made a video of these steps:
 
 Happy to oblige:
 
-[**bennett39/vue\_django**  
+[**bennett39/vue\_django**
 _Contribute to bennett39/vue\_django development by creating an account on GitHub._github.com](https://github.com/bennett39/vue_django "https://github.com/bennett39/vue_django")[](https://github.com/bennett39/vue_django)
 
 ### Create a New Django App Before We Start
@@ -78,34 +76,32 @@ $ django-admin startproject mysite
 
 If we look at the directory now, we’ll see that Django created a new folder for us:
 
-$ ls  
+$ ls
 mysite/
 
 And if we look inside that folder, there’s everything we need to run a Django site:
 
-$ cd mysite/  
-$ ls  
+$ cd mysite/
+$ ls
 manage.py\*  mysite/
 
 Let’s make sure it works. Test run the Django server:
 
 $ python manage.py runserver
 
-Watching for file changes with StatReloader  
+Watching for file changes with StatReloader
 Performing system checks...
 
 System check identified no issues (0 silenced).
 
 You have 17 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions. Run 'python manage.py migrate' to apply them.
 
-July 24, 2020 - 12:14:09  
-Django version 3.0.8, using settings 'mysite.settings'  
-Starting development server at http://127.0.0.1:8000/  
+July 24, 2020 - 12:14:09
+Django version 3.0.8, using settings 'mysite.settings'
+Starting development server at http://127.0.0.1:8000/
 Quit the server with CONTROL-C.
 
 Go to http://127.0.0.1:8000 and you should see the Django welcome screen!
-
-![](/Users/bennettgarner/Repos/medium-export-4b46aa4e91f20dbf349cd1ed9133a2978c8dcbbd9f7d7b84cef20f84ed36ffda/posts/md_1643327843943/img/1__t7UmkbtuXTh8Hq1w4Yz2Ew.png)
 
 ### 1.3 Create the Vue app
 
@@ -113,8 +109,8 @@ We could build our application with the folder structure the way it is right now
 
 So, let’s create a new app for our Vue application (if you already have an existing project, this will be the app you want to use Vue in).
 
-$ python manage.py startapp vue\_app  
-$ ls  
+$ python manage.py startapp vue\_app
+$ ls
 db.sqlite3 manage.py  mysite/     vue\_app/
 
 ### 1.4 Register the vue\_app app with the mysite project
@@ -123,9 +119,9 @@ We need to tell Django to recognize this new app that we just created. The steps
 
 So, we edit `mysite/settings.py` :
 
-INSTALLED\_APPS = \[  
-    'vue\_app.apps.VueAppConfig',  
-    ... # Leave all the other INSTALLED\_APPS  
+INSTALLED\_APPS = \[
+    'vue\_app.apps.VueAppConfig',
+    ... # Leave all the other INSTALLED\_APPS
 \]
 
 ### 1.5 Migrate the database
@@ -138,25 +134,25 @@ So, let’s migrate those initial models:
 
 $ python manage.py migrate
 
-Operations to perform:  
-  Apply all migrations: admin, auth, contenttypes, sessions  
-Running migrations:  
-  Applying contenttypes.0001\_initial... OK  
-  Applying auth.0001\_initial... OK  
-  Applying admin.0001\_initial... OK  
-  Applying admin.0002\_logentry\_remove\_auto\_add... OK  
-  Applying admin.0003\_logentry\_add\_action\_flag\_choices... OK  
-  Applying contenttypes.0002\_remove\_content\_type\_name... OK  
-  Applying auth.0002\_alter\_permission\_name\_max\_length... OK  
-  Applying auth.0003\_alter\_user\_email\_max\_length... OK  
-  Applying auth.0004\_alter\_user\_username\_opts... OK  
-  Applying auth.0005\_alter\_user\_last\_login\_null... OK  
-  Applying auth.0006\_require\_contenttypes\_0002... OK  
-  Applying auth.0007\_alter\_validators\_add\_error\_messages... OK  
-  Applying auth.0008\_alter\_user\_username\_max\_length... OK  
-  Applying auth.0009\_alter\_user\_last\_name\_max\_length... OK  
-  Applying auth.0010\_alter\_group\_name\_max\_length... OK  
-  Applying auth.0011\_update\_proxy\_permissions... OK  
+Operations to perform:
+  Apply all migrations: admin, auth, contenttypes, sessions
+Running migrations:
+  Applying contenttypes.0001\_initial... OK
+  Applying auth.0001\_initial... OK
+  Applying admin.0001\_initial... OK
+  Applying admin.0002\_logentry\_remove\_auto\_add... OK
+  Applying admin.0003\_logentry\_add\_action\_flag\_choices... OK
+  Applying contenttypes.0002\_remove\_content\_type\_name... OK
+  Applying auth.0002\_alter\_permission\_name\_max\_length... OK
+  Applying auth.0003\_alter\_user\_email\_max\_length... OK
+  Applying auth.0004\_alter\_user\_username\_opts... OK
+  Applying auth.0005\_alter\_user\_last\_login\_null... OK
+  Applying auth.0006\_require\_contenttypes\_0002... OK
+  Applying auth.0007\_alter\_validators\_add\_error\_messages... OK
+  Applying auth.0008\_alter\_user\_username\_max\_length... OK
+  Applying auth.0009\_alter\_user\_last\_name\_max\_length... OK
+  Applying auth.0010\_alter\_group\_name\_max\_length... OK
+  Applying auth.0011\_update\_proxy\_permissions... OK
   Applying sessions.0001\_initial... OK
 
 We’ve got Django up and running! Now, let’s add Vue to our project!
@@ -179,13 +175,13 @@ Now, create `test.html` in `vue_app/templates/vue_app/` :
 
 <!-- vue\_app/templates/vue\_app/test.html -->
 
-<html>  
-  <head>  
-    <title>Testing Vue</title>  
-  </head>  
-  <body>  
-    <h1>Testing, Testing</h1>  
-  </body>  
+<html>
+  <head>
+    <title>Testing Vue</title>
+  </head>
+  <body>
+    <h1>Testing, Testing</h1>
+  </body>
 </html>
 
 As you can see, we don’t have Vue in the template at all yet, but we’ll add it soon.
@@ -198,26 +194,24 @@ Open `vue_app/views.py` (it should already exist):
 
 from django.shortcuts import render
 
-def test\_vue(request):  
+def test\_vue(request):
     return render(request, 'vue\_app/test.html')
 
 Next, we need a URL to point to that view. Go back to the folder where `manage.py` is (I called it `mysite/` ). Then, open `mysite/mysite/urls.py`. We’ll just define this URL globally, since it’s the only one in our test app for now.
 
 \# mysite/mysite/urls.py
 
-from django.contrib import admin  
+from django.contrib import admin
 from django.urls import path
 
 from vue\_app import views as vue\_views  # This line is new
 
-urlpatterns = \[  
-    path('admin/', admin.site.urls),  
-    path('test', vue\_views.test\_vue),  # This line is new  
+urlpatterns = \[
+    path('admin/', admin.site.urls),
+    path('test', vue\_views.test\_vue),  # This line is new
 \]
 
 If you `python manage.py runserver` now and go to [http://127.0.0.1:8000/test](http://127.0.0.1:8000/test) you should see our test page.
-
-![](/Users/bennettgarner/Repos/medium-export-4b46aa4e91f20dbf349cd1ed9133a2978c8dcbbd9f7d7b84cef20f84ed36ffda/posts/md_1643327843943/img/1__chmM6p0QIQvk__Ugz2rtkoQ.png)
 
 #### Finally, we can add Vue!
 
@@ -237,18 +231,18 @@ Setting up your Django app to use different settings in dev vs. production is ou
 
 Once you do, you can import the script something like this:
 
-<html>  
-  <head>  
-    {% if env\_name == 'production' %}  
-      <script src="[https://cdn.jsdelivr.net/npm/vue](https://cdn.jsdelivr.net/npm/vue)"></script>  
-    {% else %}  
-      <script src="[https://cdn.jsdelivr.net/npm/vue/dist/vue.js](https://cdn.jsdelivr.net/npm/vue/dist/vue.js)"></script>  
-    {% endif %}  
-    <title>Testing Vue</title>  
-  </head>  
-  <body>  
-    <h1>Testing, Testing</h1>  
-  </body>  
+<html>
+  <head>
+    {% if env\_name == 'production' %}
+      <script src="[https://cdn.jsdelivr.net/npm/vue](https://cdn.jsdelivr.net/npm/vue)"></script>
+    {% else %}
+      <script src="[https://cdn.jsdelivr.net/npm/vue/dist/vue.js](https://cdn.jsdelivr.net/npm/vue/dist/vue.js)"></script>
+    {% endif %}
+    <title>Testing Vue</title>
+  </head>
+  <body>
+    <h1>Testing, Testing</h1>
+  </body>
 </html>
 
 That’s it! You’ve added Vue to your template. Let’s try it out!
@@ -257,31 +251,29 @@ That’s it! You’ve added Vue to your template. Let’s try it out!
 
 Now, we’re ready to write some Vue code!
 
-<html>  
-  <head>  
-    <!-- development version, includes helpful console warnings -->  
-    <script src="[https://cdn.jsdelivr.net/npm/vue/dist/vue.js](https://cdn.jsdelivr.net/npm/vue/dist/vue.js)"></script>  
-    <title>Testing Vue</title>  
+<html>
+  <head>
+    <!-- development version, includes helpful console warnings -->
+    <script src="[https://cdn.jsdelivr.net/npm/vue/dist/vue.js](https://cdn.jsdelivr.net/npm/vue/dist/vue.js)"></script>
+    <title>Testing Vue</title>
   </head>
 
-  <body>  
-    <div id="vue-app">  
-      <h1>\[\[ myTitle \]\]</h1>  
+  <body>
+    <div id="vue-app">
+      <h1>\[\[ myTitle \]\]</h1>
     </div>
 
-    <script type="text/javascript">  
-      let app = new Vue({  
-        el: "#vue-app",  
-        delimiters: \['\[\[', '\]\]'\],  
-        data: {  
-          myTitle: 'Hello Vue!',  
-        },  
-      });  
-    </script>  
-  </body>  
+    <script type="text/javascript">
+      let app = new Vue({
+        el: "#vue-app",
+        delimiters: \['\[\[', '\]\]'\],
+        data: {
+          myTitle: 'Hello Vue!',
+        },
+      });
+    </script>
+  </body>
 </html>
-
-![](/Users/bennettgarner/Repos/medium-export-4b46aa4e91f20dbf349cd1ed9133a2978c8dcbbd9f7d7b84cef20f84ed36ffda/posts/md_1643327843943/img/1__3wTlLQOj__6rQG4xg15YHmg.png)
 
 Couple things to notice here:
 
@@ -292,17 +284,17 @@ Couple things to notice here:
 
 // Same example as above, but w/ more advanced Vue & no delimiters
 
-<div id="vue-app">  
-  <span v-html="myTitle"></span>  
+<div id="vue-app">
+  <span v-html="myTitle"></span>
 </div>
 
-<script type="text/javascript">  
-  let app = new Vue({  
-    el: "#vue-app",  
-    data: {  
-      myTitle: '<h1>Hello Vue!</h1>',  
-    },  
-  });  
+<script type="text/javascript">
+  let app = new Vue({
+    el: "#vue-app",
+    data: {
+      myTitle: '<h1>Hello Vue!</h1>',
+    },
+  });
 </script>
 
 Importing from a CDN is by far the easiest way to add Vue to Django, and you’ll actually be able to get pretty far with it before you need to adopt a different strategy…
@@ -325,7 +317,7 @@ If you want to use all the features of the Vue CLI and .vue files, then this ap
 
 That involves a bit more configuration, but don’t worry! It’s not too hard to do. I’ve written another post with all the details:
 
-[**Vue + Django: Using .vue Files and the Vue CLI**  
+[**Vue + Django: Using .vue Files and the Vue CLI**
 _Build a full-stack website running on Django_betterprogramming.pub](https://betterprogramming.pub/vue-django-using-vue-files-and-the-vue-cli-d6dd8c9145eb "https://betterprogramming.pub/vue-django-using-vue-files-and-the-vue-cli-d6dd8c9145eb")[](https://betterprogramming.pub/vue-django-using-vue-files-and-the-vue-cli-d6dd8c9145eb)
 
 ### Vue on Django — We did it!

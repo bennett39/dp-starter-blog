@@ -9,8 +9,6 @@ keywords: []
 slug: /@bennettgarner/why-i-code-in-python-a1e4012eb859
 ---
 
-![](/Users/bennettgarner/Repos/medium-export-4b46aa4e91f20dbf349cd1ed9133a2978c8dcbbd9f7d7b84cef20f84ed36ffda/posts/md_1643327843943/img/1__4ZZtp1Zcw3RlUBZGFwxrpA.png)
-
 I’m by no means an expert developer, but I’ve learned other languages and Python suits me best. Here’s why.
 
 It’s often said there’s no such thing as the “best programming language,” only languages that are well-suited to particular use cases and contexts. I agree.
@@ -49,17 +47,17 @@ Gone is all the boilerplate and overhead of thinking about locations in memory a
 
 Something like this in C:
 
-// If characters in keyphrase are not alphabetical, give error.    for (int i = 0, n = strlen(argv\[1\]); i < n; i++) {  
-    if (isalpha(argv\[1\]\[i\]) == false) {  
-        printf("Alphabetic characters only, please.\\n");  
-        return 1;  
-    }      
+// If characters in keyphrase are not alphabetical, give error.    for (int i = 0, n = strlen(argv\[1\]); i < n; i++) {
+    if (isalpha(argv\[1\]\[i\]) == false) {
+        printf("Alphabetic characters only, please.\\n");
+        return 1;
+    }
 }
 
 Becomes this in Python:
 
-if sys.argv\[1\].isalpha() == False:  
-    print("Alphabetic characters only please.")  
+if sys.argv\[1\].isalpha() == False:
+    print("Alphabetic characters only please.")
     sys.exit(1)
 
 We avoided the curly braces and parentheses. More importantly, Python has built-in string handling, so we didn’t need a for loop to look through all the characters in `argv[1]`. Also, gone are the days of looking for missed semicolons at compile time.

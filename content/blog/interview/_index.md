@@ -8,8 +8,6 @@ slug: >-
   /@bennettgarner/what-i-look-for-when-interviewing-software-engineers-5acec61bafd
 ---
 
-![](/Users/bennettgarner/Repos/medium-export-4b46aa4e91f20dbf349cd1ed9133a2978c8dcbbd9f7d7b84cef20f84ed36ffda/posts/md_1643327843943/img/1__Za8wrT12eqQRvpEixNsbmQ.png)
-
 > _A few simple changes to your approach can make all the difference as a candidate._
 
 As an early employee at a fast-growing startup, I’ve had the opportunity to interview many software engineers. Over the course of those interviews, I’ve developed a few simple heuristics for whether the interview was a success.
@@ -22,10 +20,10 @@ Let me preface this entire article by saying that interviews may be entirely poi
 
 There’s a decent amount of evidence to suggest that picking candidates via interview is no better than random chance. Flipping a coin might be a better way to decide who to hire.
 
-[**Why job interviews are pointless**  
+[**Why job interviews are pointless**
 _tatistics often sounds like a dry subject, but many judgments and decisions in everyday life would be improved by an…_www.theguardian.com](https://www.theguardian.com/lifeandstyle/2015/nov/22/why-job-interviews-are-pointless "https://www.theguardian.com/lifeandstyle/2015/nov/22/why-job-interviews-are-pointless")[](https://www.theguardian.com/lifeandstyle/2015/nov/22/why-job-interviews-are-pointless)
 
-[**Opinion | The Utter Uselessness of Job Interviews (Published 2017)**  
+[**Opinion | The Utter Uselessness of Job Interviews (Published 2017)**
 _It gets worse. Unbeknown to our subjects, we had instructed some of the interviewees to respond randomly to their…_www.nytimes.com](https://www.nytimes.com/2017/04/08/opinion/sunday/the-utter-uselessness-of-job-interviews.html "https://www.nytimes.com/2017/04/08/opinion/sunday/the-utter-uselessness-of-job-interviews.html")[](https://www.nytimes.com/2017/04/08/opinion/sunday/the-utter-uselessness-of-job-interviews.html)
 
 It’s not nice to admit, but as an interviewer, I know this in the back of my mind while I’m talking to candidates. A 30-minute conversation with a candidate isn’t likely to help me determine if they’ll be a good software engineer.
@@ -46,7 +44,7 @@ But at least in the interviews I conduct, I try hard to keep the energy light an
 
 I’ve long thought that [social skills are more important than technical skills](https://blog.usejournal.com/developers-social-skills-are-more-important-than-technical-skills-f36742f0a04c) for a developer. If the candidate has trouble smiling, being curious, or matching my energy, it’s difficult for me to imagine working with them.
 
-[**Developers: social skills are more important than technical skills**  
+[**Developers: social skills are more important than technical skills**
 _Don’t get me wrong, you need to be able to code! But your career advancement and life happiness depend on your…_blog.usejournal.com](https://blog.usejournal.com/developers-social-skills-are-more-important-than-technical-skills-f36742f0a04c "https://blog.usejournal.com/developers-social-skills-are-more-important-than-technical-skills-f36742f0a04c")[](https://blog.usejournal.com/developers-social-skills-are-more-important-than-technical-skills-f36742f0a04c)
 
 ### 2\. Ask Questions
@@ -82,8 +80,6 @@ Gladwell shares a brilliantly designed research study that put ordinary people i
 Some research subjects in the study were confident and stated their position strongly. Others were nervous during the study and acted anxious, regardless of if they were lying or telling the truth.
 
 The group can be split into four quadrants:
-
-![](/Users/bennettgarner/Repos/medium-export-4b46aa4e91f20dbf349cd1ed9133a2978c8dcbbd9f7d7b84cef20f84ed36ffda/posts/md_1643327843943/img/1__AVtM3GiGN4517PASksxzLA.png)
 
 The researchers then took the videos of these liars/truth-tellers and showed them to another group of people. Could they accurately spot who was lying?
 

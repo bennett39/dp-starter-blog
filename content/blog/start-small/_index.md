@@ -49,8 +49,6 @@ Let’s just render the tic-tac-toe board, first. That’s it!
 
 Okay, so let’s think about a tic-tac-toe board:
 
-![](/Users/bennettgarner/Repos/medium-export-4b46aa4e91f20dbf349cd1ed9133a2978c8dcbbd9f7d7b84cef20f84ed36ffda/posts/md_1643327843943/img/1__9LBDOx6gG4mTuPGPDp888w.png)
-
 It’s a 3x3 board. Each spot on the board is in one of three states: blank, X, or O.
 
 So, let’s just create a static board for now so that we can practice rendering it in Python.
@@ -67,10 +65,10 @@ This isn’t a tutorial. Don’t just copy my code or skim through it. Think abo
 
 Okay, here’s my idea of how to define the board.
 
-board = \[  
-    \["\_", "\_", "O"\],  
-    \["X", "O", "\_"\],  
-    \["O", "\_", "X"\]  
+board = \[
+    \["\_", "\_", "O"\],
+    \["X", "O", "\_"\],
+    \["O", "\_", "X"\]
 \]
 
 I created the board as a list of lists, that way we can keep track of the rows easily. But you could do it as a single list, too.
@@ -93,17 +91,17 @@ First, let’s see what it looks like if we just print the board.
 
 \# ttt.py
 
-board = \[                                                                                                                                                               
-    \["\_", "\_", "O"\],                                                                                                                                                    
-    \["X", "O", "\_"\],                                                                                                                                                    
-    \["O", "\_", "X"\]                                                                                                                                                     
-\]                                                                                                                                                                       
-                                                                                                                                                                        
+board = \[
+    \["\_", "\_", "O"\],
+    \["X", "O", "\_"\],
+    \["O", "\_", "X"\]
+\]
+
 print(board)
 
 Run it:
 
-$ python ttt.py  
+$ python ttt.py
 \[\['\_', '\_', 'O'\], \['X', 'O', '\_'\], \['O', '\_', 'X'\]\]
 
 Hmm, that prints the board, but it’s not intuitive. Think we can stack the rows on top of each other?
@@ -116,22 +114,22 @@ Hmm, that prints the board, but it’s not intuitive. Think we can stack the row
 
 …
 
-\# ttt.py                                                                                                                                                                
-                                                                                                                                                                       
-board = \[                                                                                                                                                               
-    \["\_", "\_", "O"\],                                                                                                                                                    
-    \["X", "O", "\_"\],                                                                                                                                                    
-    \["O", "\_", "X"\]                                                                                                                                                     
-\]                                                                                                                                                                       
-                                                                                                                                                                       
-for row in board:                                                                                                                                                       
+\# ttt.py
+
+board = \[
+    \["\_", "\_", "O"\],
+    \["X", "O", "\_"\],
+    \["O", "\_", "X"\]
+\]
+
+for row in board:
     print(row)
 
 Run it:
 
-$ python ttt.py  
-\['\_', '\_', 'O'\]  
-\['X', 'O', '\_'\]  
+$ python ttt.py
+\['\_', '\_', 'O'\]
+\['X', 'O', '\_'\]
 \['O', '\_', 'X'\]
 
 That looks good!
@@ -154,16 +152,16 @@ It’s much better if we define a `print_board` function. That’s pretty easy t
 
 …
 
-\# ttt.py                                                                                                                                                                
-                                                                                                                                                                       
-board = \[                                                                                                                                                               
-    \["\_", "\_", "O"\],                                                                                                                               
-    \["X", "O", "\_"\],                                                                                                                                           
-    \["O", "\_", "X"\]  
-\]      
+\# ttt.py
 
-def print\_board(board):                                                                                                                                                                                                                                                                                                                                       
-    for row in board:                                                                                                                                                       
+board = \[
+    \["\_", "\_", "O"\],
+    \["X", "O", "\_"\],
+    \["O", "\_", "X"\]
+\]
+
+def print\_board(board):
+    for row in board:
         print(row)
 
 print\_board(board)
@@ -176,10 +174,10 @@ Now, let’s get rid of our sample board and initialize the board in its empty s
 
 We could easily do something like this:
 
-board = \[                                                                                                                                                               
-    \["\_", "\_", "\_"\],                                                                                                                               
-    \["\_", "\_", "\_"\],                                                                                                                                           
-    \["\_", "\_", "\_"\]  
+board = \[
+    \["\_", "\_", "\_"\],
+    \["\_", "\_", "\_"\],
+    \["\_", "\_", "\_"\]
 \]
 
 And that would work perfectly well.
@@ -208,7 +206,7 @@ You might be thinking,
 
 And you’d be right to think that! We can technically print the board in a single line using list comprehension:
 
-def print\_board(board):  
+def print\_board(board):
     \[print(row) for row in board\]
 
 But I was curious, is this actually a good idea? It seems like the list comprehension might add overhead to the print statements, creating an unnecessary list.
@@ -221,33 +219,33 @@ import timeit
 
 board = \[\["\_" for \_ in range(3)\] for \_ in range(3)\]
 
-def print\_board\_list(board):  
+def print\_board\_list(board):
     \[print(row) for row in board\]
 
-def print\_board\_for(board):  
-    for row in board:  
+def print\_board\_for(board):
+    for row in board:
         print(row)
 
-begin = timeit.default\_timer()  
-print\_board\_list(board)  
-end = timeit.default\_timer()  
+begin = timeit.default\_timer()
+print\_board\_list(board)
+end = timeit.default\_timer()
 print(f"Using list comprehension: {end - begin}")
 
-begin = timeit.default\_timer()  
-print\_board\_for(board)  
-end = timeit.default\_timer()  
+begin = timeit.default\_timer()
+print\_board\_for(board)
+end = timeit.default\_timer()
 print(f"Using a for loop: {end - begin}")
 
 And it turns out that using list comprehension in this case is about twice as slow, on average:
 
-$ python ttt.py   
-\['\_', '\_', '\_'\]  
-\['\_', '\_', '\_'\]  
-\['\_', '\_', '\_'\]  
-Using list comprehension: 0.00018204300431534648  
-\['\_', '\_', '\_'\]  
-\['\_', '\_', '\_'\]  
-\['\_', '\_', '\_'\]  
+$ python ttt.py
+\['\_', '\_', '\_'\]
+\['\_', '\_', '\_'\]
+\['\_', '\_', '\_'\]
+Using list comprehension: 0.00018204300431534648
+\['\_', '\_', '\_'\]
+\['\_', '\_', '\_'\]
+\['\_', '\_', '\_'\]
 Using a for loop: 9.22030012588948e-05
 
 _(Notice the scientific notation_ `_e-05_` _at the end, if you’re confused.)_
@@ -274,12 +272,12 @@ You can find [today’s code on GitHub](https://github.com/bennett39/ttt-medium/
 
 In the [next post in the series](https://medium.com/@BennettGarner/tic-tac-toe-series-getting-validating-user-input-in-python-feaef58cc54), we’ll start experimenting with accepting user input, catching errors, and updating the board.
 
-[**Tic-tac-toe series: Getting & validating user input in Python**  
+[**Tic-tac-toe series: Getting & validating user input in Python**
 _Yesterday, I started a series about learning Python and software development incrementally using tic-tac-toe as an…_medium.com](https://medium.com/future-vision/tic-tac-toe-series-getting-validating-user-input-in-python-feaef58cc54 "https://medium.com/future-vision/tic-tac-toe-series-getting-validating-user-input-in-python-feaef58cc54")[](https://medium.com/future-vision/tic-tac-toe-series-getting-validating-user-input-in-python-feaef58cc54)
 
 Check out the complete list of [all posts in this tic-tac-toe series](https://medium.com/@BennettGarner/the-tic-tac-toe-series-master-list-a4a908f015f9).
 
-[**The Tic-tac-toe Series: Master List**  
+[**The Tic-tac-toe Series: Master List**
 _Here are all the posts in the tic-tac-toe series so far:_bennettgarner.medium.com](https://bennettgarner.medium.com/the-tic-tac-toe-series-master-list-a4a908f015f9 "https://bennettgarner.medium.com/the-tic-tac-toe-series-master-list-a4a908f015f9")[](https://bennettgarner.medium.com/the-tic-tac-toe-series-master-list-a4a908f015f9)
 
 ### Like what you’ve read here?

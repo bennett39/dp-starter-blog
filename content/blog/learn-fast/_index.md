@@ -9,8 +9,6 @@ keywords: []
 slug: /@bennettgarner/learning-to-code-heres-how-to-learn-fast-309023854495
 ---
 
-![](/Users/bennettgarner/Repos/medium-export-4b46aa4e91f20dbf349cd1ed9133a2978c8dcbbd9f7d7b84cef20f84ed36ffda/posts/md_1643327843943/img/1__3rviZFQ__kvy1MwevrQ6r6Q.png)
-
 This advice will be controversial and seem counter-intuitive, I know.
 
 > Tutorials are a bad way to learn real coding skills.
@@ -38,8 +36,6 @@ Once you have the basics, though, watching tutorial after tutorial won’t get y
 If you’re learning to code, you’ve probably encountered or heard of the plateau you hit shortly after mastering the basics. You know enough code to be dangerous, but not enough to actually build and deploy a useful application to the internet.
 
 At this phase, it’s tempting to think that you need more learning. “Another tutorial will help me get over the hump, right?”
-
-![](/Users/bennettgarner/Repos/medium-export-4b46aa4e91f20dbf349cd1ed9133a2978c8dcbbd9f7d7b84cef20f84ed36ffda/posts/md_1643327843943/img/1__Unan4__1RT1tsEJNk6xhGjA.jpeg)
 
 So you try another tutorial. It teaches you a specific set of steps to achieve some result. Say you learn how to [build a REST API](https://medium.com/swlh/build-your-first-rest-api-with-django-rest-framework-e394e39a482c) or [start using Vue](https://levelup.gitconnected.com/vue-django-getting-started-88d3f4c2ba62). Cool — you learned a new tool and it really feels like you’ve added something to your toolbelt.
 
@@ -72,8 +68,6 @@ To really learn software development, you need to get comfortable with complexit
 As a professional software developer, it’s rare that I feel certain about the solution to a given problem. I spend a lot of time researching, thinking, looking through old code, and generally feeling confused.
 
 And it turns out: that’s what software development feels like!
-
-![](/Users/bennettgarner/Repos/medium-export-4b46aa4e91f20dbf349cd1ed9133a2978c8dcbbd9f7d7b84cef20f84ed36ffda/posts/md_1643327843943/img/1__YZ1NClEX0IhGn__k2cwF__YQ.jpeg)
 
 Every developer I know has this experience. They all spend a lot of time wondering “why the hell isn’t it working” and “how are we gonna get this to work?”
 
@@ -111,7 +105,7 @@ This is the fastest way I know to learn how to code. In brief:
 4.  Write about it
 5.  Go back to step 2 with something more complex
 
-[**Developer Career Advice: Start Before You’re Ready**  
+[**Developer Career Advice: Start Before You’re Ready**
 _The most successful people in the world all have something in common. They jump into projects, ventures, relationships…_medium.com](https://medium.com/future-vision/developer-career-advice-start-before-youre-ready-e25107b8b9f "https://medium.com/future-vision/developer-career-advice-start-before-youre-ready-e25107b8b9f")[](https://medium.com/future-vision/developer-career-advice-start-before-youre-ready-e25107b8b9f)
 
 In my experience, you’ll learn much more quickly from solving your own problems and trying to actually deploy something real. You’ll also gain practical skills and reflexes for how software development actually works.

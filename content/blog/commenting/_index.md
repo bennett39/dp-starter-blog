@@ -12,8 +12,6 @@ slug: >-
   /@bennettgarner/youre-commenting-your-code-too-much-and-other-controversial-thoughts-on-documentation-1ee617ed46af
 ---
 
-![](/Users/bennettgarner/Repos/medium-export-4b46aa4e91f20dbf349cd1ed9133a2978c8dcbbd9f7d7b84cef20f84ed36ffda/posts/md_1643327843943/img/1__x5F0GbT81p44PQOM__sp7hg.png)
-
 The best code comment is often no comment at all… before you get out your pitchforks, let me explain.
 
 Over-commented code is often more difficult to understand than code without comments.
@@ -50,22 +48,22 @@ The biggest rule of eliminating comments is not to do something like this:
 
 \# Nested for loops to iterate through values
 
-for i in outer\_loop:  
-    for j in inner\_loop:  
+for i in outer\_loop:
+    for j in inner\_loop:
        do something
 
 Any good developer knows what a nested for loop is and how it will work. They can work out what’s going to happen when the code runs. No need to add comments to explain it.
 
 Here’s some code I wrote when I was first learning that illustrates my point:
 
-/\* Use modulo and base-10 division/multiplication to reverse an   
+/\* Use modulo and base-10 division/multiplication to reverse an
  \* int \*/
 
-while (original > 0) {  
-    reverse \*= 10;   
-    int r = original % 10;  
-    reverse += r;  
-    original /= 10;  
+while (original > 0) {
+    reverse \*= 10;
+    int r = original % 10;
+    reverse += r;
+    original /= 10;
 }
 
 The comment is nice, and relatively harmless on its own, but it’s unnecessary. As the code base grows, little comments like that add up. Add enough of them and you can end up doubling the amount of stuff future maintainers of your code have to read.
@@ -84,27 +82,27 @@ Documentation doesn’t add anything for the user, though. So, minimizing your t
 
 Here’s some code I’ve written recently with a lot less comments, but better function names and self-explanatory code:
 
-unsigned int sum\_squares(int m) {  
-    int i;  
+unsigned int sum\_squares(int m) {
+    int i;
     int squares = 0;
 
-    for (i = 0; i <= m; i++) {  
-        squares += i\*i;  
+    for (i = 0; i <= m; i++) {
+        squares += i\*i;
     }
 
-    return squares;  
+    return squares;
 }
 
-/\* Quadratic, so could reach billions. Use long long.\*/  
-unsigned long long square\_sums(int n) {  
-    int j;  
+/\* Quadratic, so could reach billions. Use long long.\*/
+unsigned long long square\_sums(int n) {
+    int j;
     int sum;
 
-    for (j = 0; j <= n; j++) {  
-        sum += j;  
-    }  
-      
-    return sum\*sum;  
+    for (j = 0; j <= n; j++) {
+        sum += j;
+    }
+
+    return sum\*sum;
 }
 
 (Totally open to corrections to my C code. By no means an expert!)

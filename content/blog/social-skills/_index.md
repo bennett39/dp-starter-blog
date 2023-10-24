@@ -14,8 +14,6 @@ _Don’t get me wrong, you need to be able to code! But your career advancement 
 
 Edit: I posted about this [topic on Reddit](https://www.reddit.com/r/cscareerquestions/comments/blsbsn/psa_social_skills_are_often_more_important_than/) today, and it has seen quite a bit of conversation. Check out the comments there to hear people’s opinions/experiences!
 
-![](/Users/bennettgarner/Repos/medium-export-4b46aa4e91f20dbf349cd1ed9133a2978c8dcbbd9f7d7b84cef20f84ed36ffda/posts/md_1643327843943/img/1__3c6iBq3Rgy2cXygEe__WBug.jpeg)
-
 It’s no secret that software developers have a reputation for being awkward and introverted.
 
 I’m here to tell you there’s nothing wrong with that!
@@ -48,8 +46,6 @@ Everyone has experienced social awkwardness, anxiety, and failures at some point
 
 When developers get passed over for these opportunities, they start to think it’s a problem with what they have to offer.
 
-![](/Users/bennettgarner/Repos/medium-export-4b46aa4e91f20dbf349cd1ed9133a2978c8dcbbd9f7d7b84cef20f84ed36ffda/posts/md_1643327843943/img/1__gJdeq8iYh9bGuqdZgyqQ4g.jpeg)
-
 They look at the top engineers and think they don’t know enough. So, they invest more time in learning increasingly obscure coding practices, drilling technical problems on LeetCode, or trying out new languages/frameworks.
 
 Or, they look at social media and advertising where muscle-strapped models seem to live the perfect life. Some guys try to compensate for a lack of social skills by building that life. They go to the gym more, buy expensive clothes, or get a new haircut thinking that muscles, possessions, or physical appearance are the keys to career success.
@@ -61,8 +57,6 @@ To put it in startup terms: increasing your product quality will not fix your ma
 ### Marketing > Product Quality
 
 Think of the iPhone. At this point, there are several phones on the market that are comparable to the latest iPhone in terms of hardware.
-
-![](/Users/bennettgarner/Repos/medium-export-4b46aa4e91f20dbf349cd1ed9133a2978c8dcbbd9f7d7b84cef20f84ed36ffda/posts/md_1643327843943/img/1__WtKY1fZ08s9ZiDW8O0QNjw.jpeg)
 
 However, those phones don’t have people queuing up down the street, camping over night to get the latest model in the same way the iPhone does.
 
@@ -79,8 +73,6 @@ Being a great singer alone doesn’t guarantee you Beyonce-level success. You ha
 ### “If you build it, they will come”
 
 In the same way, if you want to build an awesome career, social circle, romantic relationship, family life, whatever — you need to know how to market yourself and build connections.
-
-![](/Users/bennettgarner/Repos/medium-export-4b46aa4e91f20dbf349cd1ed9133a2978c8dcbbd9f7d7b84cef20f84ed36ffda/posts/md_1643327843943/img/1__MCnWWFIHV50OWovZfua7yA.jpeg)
 
 Many developers have the “if you build it, they will come” mindset. They believe that improving their technical skills will lead to promotions, raises, new jobs, mentorship, and success.
 
@@ -103,8 +95,6 @@ Even if you don’t want leadership positions or a new job, humans are social an
 A helpful mindset is instead of being a chore or a task to accomplish, being social should just be an ordinary part of life.
 
 When you approach a conversation with a task, objective, or inflexible opinion, you’re not open to the possibilities that conversation might hold. Moreover, you’ll find that if you’re trying to get or accomplish something with your conversations, people will be able to sense it. Your neediness or pushiness will drive people away.
-
-![](/Users/bennettgarner/Repos/medium-export-4b46aa4e91f20dbf349cd1ed9133a2978c8dcbbd9f7d7b84cef20f84ed36ffda/posts/md_1643327843943/img/1__9OsjVQrMIL9t4duNg__nUqw.jpeg)
 
 Instead, simply being open and interested with no agenda will get you a long way in conversation. Keep things positive and fun. Empathize with people’s stories and issues.
 

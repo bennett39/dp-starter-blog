@@ -12,8 +12,6 @@ slug: >-
   /@bennettgarner/hack-the-developer-job-search-the-most-successful-tactics-used-by-job-seeking-software-engineers-e63ce2b29535
 ---
 
-![](/Users/bennettgarner/Repos/medium-export-4b46aa4e91f20dbf349cd1ed9133a2978c8dcbbd9f7d7b84cef20f84ed36ffda/posts/md_1643327843943/img/1__8AyYm4nKrRGUz3pyjEoYDg.png)
-
 Blasting your resume out to hundreds of companies is soul-sucking, demoralizing, and largely ineffective.
 
 But in the current job market, it can be difficult to find other ways to find opportunities. This is especially true if you’re new to the industry, recently graduated, or trying to relocate to a new city.
@@ -29,8 +27,6 @@ After all, we’re software developers! The job search process is just another c
 Before you start, it’s helpful to get real with yourself about what you expect from your new job.
 
 You need to get really specific. Try to carve out a niche in what you’re looking for so you can target your efforts. By doing so, you’ll become a big fish in a small pond and stand out.
-
-![](/Users/bennettgarner/Repos/medium-export-4b46aa4e91f20dbf349cd1ed9133a2978c8dcbbd9f7d7b84cef20f84ed36ffda/posts/md_1643327843943/img/1__7hCiflNDrop6XReibE__iHA.png)
 
 Saying, “I’ll do anything, anywhere!” is not an effective way to start your job search.
 
@@ -63,8 +59,6 @@ Luckily, the common conception around networking is totally wrong. Rarely do you
 
 Instead, networking usually works when you know someone who knows someone who knows someone else. So you don’t need to have direct connections, you just need to have some connections. Any connections at all is a good start, including your family, friends, and current coworkers.
 
-![](/Users/bennettgarner/Repos/medium-export-4b46aa4e91f20dbf349cd1ed9133a2978c8dcbbd9f7d7b84cef20f84ed36ffda/posts/md_1643327843943/img/1__bi__qtv__nsS8S8pSpS03jQw.jpeg)
-
 Talk to those connections, tell them the specific job you’re looking for (as you defined above), and see who they might know who might know someone.
 
 Then, the hard part is to follow up with those people. Keep tracking down new connections. Keep asking who else you should talk to.
@@ -77,8 +71,6 @@ If you put “web developer” or “software engineer” on your LinkedIn profi
 
 Here’s just one random day from my LinkedIn messages, all of these people are recruiters:
 
-![](/Users/bennettgarner/Repos/medium-export-4b46aa4e91f20dbf349cd1ed9133a2978c8dcbbd9f7d7b84cef20f84ed36ffda/posts/md_1643327843943/img/1__e__jYadBJFWPsgNEcCLWolQ.png)
-
 I’m not showing this to say that I’m special — I’m sure nearly any experienced dev with a LinkedIn can relate.
 
 It boils down to simple math. A recruiter only gets paid when they headhunt a candidate to fill a position. So, it makes sense for recruiters to reach out to as many developers as possible in hopes of filling the open positions they have.
@@ -86,8 +78,6 @@ It boils down to simple math. A recruiter only gets paid when they headhunt a ca
 Talking to these types of recruiters may be worth your time. However, you’ll want to spread your time around to as many recruiters as possible. Don’t develop recruiter loyalty and don’t spend too much time on any one recruiter.
 
 That said, adding recruiters on LinkedIn and scheduling a bunch of phone calls is a great way to expand your network and learn about more open positions.
-
-![](/Users/bennettgarner/Repos/medium-export-4b46aa4e91f20dbf349cd1ed9133a2978c8dcbbd9f7d7b84cef20f84ed36ffda/posts/md_1643327843943/img/1__f3jP__A6E47B9RROoYYqDaw.png)
 
 You can even [signal privately to recruiters](https://blog.linkedin.com/2017/october/270/Find-Your-Next-Job-by-Quietly-Signaling-You-are-Open-to-New-Opportunities) that you’re open to talking by changing some settings on LinkedIn.
 

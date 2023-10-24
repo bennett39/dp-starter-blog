@@ -12,8 +12,6 @@ slug: >-
 
 > That online tutorial you just finished didn’t teach you the “big picture” of React. Don’t make the same mistakes I made…
 
-![](/Users/bennettgarner/Repos/medium-export-4b46aa4e91f20dbf349cd1ed9133a2978c8dcbbd9f7d7b84cef20f84ed36ffda/posts/md_1643327843943/img/1__xJP__4Gjm__udlp__onF15kCw.png)
-
 ### Getting the Big Picture
 
 > React stumped me at first.
@@ -62,10 +60,10 @@ When you use React, you’re using JavaScript to create components that you can 
 
 That relationship usually takes the form of creating a component:
 
-class Hello extends React.Component {  
-  render() {  
-    return <h1>Hello World</h1>;    
-  }  
+class Hello extends React.Component {
+  render() {
+    return <h1>Hello World</h1>;
+  }
 }
 
 And then use that component almost as you would an html tag. We use JavaScript to tell the browser where to place our new component.
@@ -96,8 +94,6 @@ When you use JavaScript to do something — anything — on a web page, 
 
 JavaScript does this through an API known as the Document Object Model (DOM). If you’ve written JavaScript, chances are you’ve heard of the DOM and interacted with it.
 
-![](/Users/bennettgarner/Repos/medium-export-4b46aa4e91f20dbf349cd1ed9133a2978c8dcbbd9f7d7b84cef20f84ed36ffda/posts/md_1643327843943/img/1__aE2z8HxZ8lr8cIbz4waKog.png)
-
 However, for complicated websites, managing and making changes to the DOM can quickly become a challenge. When multiple scripts need access to multiple DOM objects, maintaining a consistent state of the DOM requires all kinds of manipulations and checks, and some things you might want to do are downright impossible.
 
 > Managing the DOM is where React is a breakthrough technology.
@@ -127,27 +123,25 @@ In addition, you no longer have to worry about the DOM and making changes to it.
 
 ### Please Pass the Props
 
-![](/Users/bennettgarner/Repos/medium-export-4b46aa4e91f20dbf349cd1ed9133a2978c8dcbbd9f7d7b84cef20f84ed36ffda/posts/md_1643327843943/img/1__djk0MzJw0BiDnZupDCX1hw.jpeg)
-
 Okay, so we’ve got the core concepts of React: creating components and rendering them in a virtual DOM. Understanding those basic concepts is key to getting why and how React works when things get more complicated.
 
 > In React, components can call and talk to each other. When they do, they can pass information between themselves as properties.
 
 Imagine we’re creating a Sudoku, Checkers, or Chess game in React. The basic construct of the board would be:
 
-class Board extends React.Component {  
-    
+class Board extends React.Component {
+
   ...
 
-  renderSquare(squareValue) {  
-    return (  
-      <Square   
-        value={squareValue}  
-      />  
-    );  
-  }  
-    
-  ...  
+  renderSquare(squareValue) {
+    return (
+      <Square
+        value={squareValue}
+      />
+    );
+  }
+
+  ...
 }
 
 I’ve left out much of the details of the Board component, above, for the sake of highlighting how one component can call another.
@@ -162,12 +156,12 @@ These values that get passed from parent to child are what’s known as “props
 
 Within the declaration of the Square class, we can now access whatever information the Board passes in as a prop.
 
-class Square extends React.Component {  
-  render () {  
-    return (  
-      <button>{props.value}</button>  
-    );  
-  }  
+class Square extends React.Component {
+  render () {
+    return (
+      <button>{props.value}</button>
+    );
+  }
 }
 
 Using `props.value` React knows to use the `value` that we passed in when we created the Square.
@@ -198,44 +192,44 @@ In vanilla JavaScript, we’d use an onclick event to update the DOM.
 
 React also uses onClick, but now we can use it to call other methods from our components.
 
-class Button extends React.Component {  
-  handleClick() {  
-    // do something  
-  }  
-  render() {  
-    return (  
-      <button onClick={() => this.handleClick()}>  
-        {buttonValue}  
-      </button>  
-    )  
-  }  
+class Button extends React.Component {
+  handleClick() {
+    // do something
+  }
+  render() {
+    return (
+      <button onClick={() => this.handleClick()}>
+        {buttonValue}
+      </button>
+    )
+  }
 }
 
 If we want to pass information back to a parent component, we can define the `handleClick()` method in the parent component and then pass that method as a prop to the the child.
 
 Now the Button component gets simplified to:
 
-class Button extends React.Component {  
-  render() {  
-    return (  
-      <button onClick={props.onClick}>  
-        {buttonValue}  
-      </button>  
-    );  
-  }  
+class Button extends React.Component {
+  render() {
+    return (
+      <button onClick={props.onClick}>
+        {buttonValue}
+      </button>
+    );
+  }
 }
 
 And the parent of Button now passes in the `onClick` method as a prop:
 
-class ButtonList extends React.Component {  
-  handleClick() {  
-    // do something  
-  }  
-  render() {  
-    return (  
-      <Button onClick={() => this.handleClick()} />  
-    );  
-  }  
+class ButtonList extends React.Component {
+  handleClick() {
+    // do something
+  }
+  render() {
+    return (
+      <Button onClick={() => this.handleClick()} />
+    );
+  }
 }
 
 The astute reader will notice that we just took ~20 lines of React to do something that could have been done in one or two lines of JavaScript if we just managed the button directly.
@@ -246,25 +240,25 @@ The structure above becomes valuable only when we need to render multiple Button
 
 Imagine a `ButtonList` component that manages multiple buttons:
 
-class ButtonList extends React.Component {  
-  renderButton() {  
-    return (  
-      <Button onClick={() => this.handleClick()} />  
-    );  
-  }  
-  renderButtonList() {  
-    let buttonList = \[\];  
-    for (let i=0; i<10; i++) {  
-      buttonList.push(this.renderButton());  
-    }  
-    return buttonList;  
-  }  
-  handleClick() {  
-    // do something  
-  }  
-  render() {  
-    return <div>{this.renderButtonList()}</div>;  
-  }  
+class ButtonList extends React.Component {
+  renderButton() {
+    return (
+      <Button onClick={() => this.handleClick()} />
+    );
+  }
+  renderButtonList() {
+    let buttonList = \[\];
+    for (let i=0; i<10; i++) {
+      buttonList.push(this.renderButton());
+    }
+    return buttonList;
+  }
+  handleClick() {
+    // do something
+  }
+  render() {
+    return <div>{this.renderButtonList()}</div>;
+  }
 }
 
 By moving `handleClick` up a level to the parent component, we do at least two things:
@@ -282,8 +276,6 @@ I’m keeping it verbose for educational purposes, but not to worry! I will shor
 
 We’ve seen that React makes it easy to create multiple child components, pass information to those children via props, and even track the state of those children from the parent component.
 
-![](/Users/bennettgarner/Repos/medium-export-4b46aa4e91f20dbf349cd1ed9133a2978c8dcbbd9f7d7b84cef20f84ed36ffda/posts/md_1643327843943/img/1__ebjc6tZABbzz1qAWURYtXA.jpeg)
-
 Part of the challenge for React, though, is remembering which children have changed. This is especially true if your application involves manipulating the order of the child components.
 
 For example, imagine if we allowed users to drag and reorder the position of the ten Buttons in ButtonList. How would React be able to keep the state of each button when the list indices are constantly changing?
@@ -294,28 +286,28 @@ To fix this problem, React likes you to provide a unique identifier for each chi
 
 Since ours is a simple list of Buttons, adding the keys is easy enough:
 
-class ButtonList extends React.Component {  
-  renderButton(i) {  
-    return (  
-      <Button   
-        key={i} // The Button now has a key!  
-        onClick={(i) => this.handleClick(i)}   
-      />  
-    );  
-  }  
-  renderButtonList() {  
-    let buttonList = \[\];  
-    for (let i=0; i<10; i++) {  
-      buttonList.push(this.renderButton(i));  
-    }  
-    return buttonList;  
-  }  
-  handleClick(i) {  
-    // do something to the button where key===i  
-  }  
-  render() {  
-    return <div>{this.renderButtonList()}</div>;  
-  }  
+class ButtonList extends React.Component {
+  renderButton(i) {
+    return (
+      <Button
+        key={i} // The Button now has a key!
+        onClick={(i) => this.handleClick(i)}
+      />
+    );
+  }
+  renderButtonList() {
+    let buttonList = \[\];
+    for (let i=0; i<10; i++) {
+      buttonList.push(this.renderButton(i));
+    }
+    return buttonList;
+  }
+  handleClick(i) {
+    // do something to the button where key===i
+  }
+  render() {
+    return <div>{this.renderButtonList()}</div>;
+  }
 }
 
 #### Ah-ha Moment
@@ -332,12 +324,12 @@ For instance, in our `ButtonList` example, if we wanted to keep a register of ho
 
 Do do so, we use a constructor to initialize the component state:
 
-class ButtonList extends React.Component {  
-  constructor(props) {  
-    super(props);  
-    this.state = {  
-      clickCount: 0,  
-    };  
+class ButtonList extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      clickCount: 0,
+    };
   }
 
   ... // The rest of the component that we've already seen.
@@ -350,14 +342,14 @@ Now that we have built our constructor, we can modify and use the state:
 
 ...
 
-  handleClick(i) {  
-    const clickCount = this.state.clickCount;  
-      
+  handleClick(i) {
+    const clickCount = this.state.clickCount;
+
     ... // Do something
 
-    this.setState({  
-      clickCount: clickCount + 1,  
-    });  
+    this.setState({
+      clickCount: clickCount + 1,
+    });
   }
 
   ...
@@ -386,26 +378,26 @@ Since we give all the power to the parent components in React, child components 
 
 Consider the final version of our basic `Button` component:
 
-class Button extends React.Component {  
-  render() {  
-    return (  
-      <button onClick={props.onClick}>  
-        {props.buttonValue}  
-      </button>  
-    );  
-  }  
+class Button extends React.Component {
+  render() {
+    return (
+      <button onClick={props.onClick}>
+        {props.buttonValue}
+      </button>
+    );
+  }
 }
 
 All that component does is render a button. Since it’s so simple, we don’t actually have to create a whole class for it in React.
 
 Instead, just make it a function:
 
-function Button(props) {  
-  return (  
-    <button onClick={props.onClick}>  
-      {props.buttonValue}  
-    </button>  
-  );  
+function Button(props) {
+  return (
+    <button onClick={props.onClick}>
+      {props.buttonValue}
+    </button>
+  );
 }
 
 We’ve removed two lines of code, but we’ve also avoided extending `React.Component`. `Button` just got a lot simpler to maintain and use.
@@ -422,18 +414,18 @@ The most important thing to understand about JSX is that Babel (a JavaScript com
 
 When you write in JSX:
 
-const element = (  
-  <h1 className="greeting">  
-    Hello, world!  
-  </h1>  
+const element = (
+  <h1 className="greeting">
+    Hello, world!
+  </h1>
 );
 
 Babel converts it to:
 
-const element = React.createElement(  
-  'h1',  
-  {className: 'greeting'},  
-  'Hello, world!'  
+const element = React.createElement(
+  'h1',
+  {className: 'greeting'},
+  'Hello, world!'
 );
 
 `React.createElement` is how the ReactDOM knows what to render.
@@ -446,38 +438,38 @@ First, `React.createElement()` only creates one element. That element can have c
 
 For example, this won’t work in JSX:
 
-return (  
-  <h1>Hello World</h1>  
-  <p>Nice to meet you</p>  
+return (
+  <h1>Hello World</h1>
+  <p>Nice to meet you</p>
 );
 
 However, if we nest those elements inside another, it will work:
 
-return (  
-  <div>  
-    <h1>Hello World</h1>  
-    <p>Nice to meet you</p>  
-  </div>  
+return (
+  <div>
+    <h1>Hello World</h1>
+    <p>Nice to meet you</p>
+  </div>
 );
 
 If you find yourself needing to return multiple elements like this often, you might consider using `React.Fragment` instead:
 
-return (  
-  <React.Fragment>  
-    <h1>Hello World</h1>  
-    <p>Nice to meet you</p>  
-  </React.Fragment>  
+return (
+  <React.Fragment>
+    <h1>Hello World</h1>
+    <p>Nice to meet you</p>
+  </React.Fragment>
 );
 
 `React.Fragment` allows you to add multiple elements without adding a bunch of unnecessary `div`s to the DOM.
 
 JSX also allows you to embed JavaScript directly into your syntax to be evaluated after compilation:
 
-function getGreeting(user) {  
-  if (user) {  
-    return <h1>Hello, {formatName(user)}!</h1>;  
-  }  
-  return <h1>Hello, Stranger.</h1>;  
+function getGreeting(user) {
+  if (user) {
+    return <h1>Hello, {formatName(user)}!</h1>;
+  }
+  return <h1>Hello, Stranger.</h1>;
 }
 
 JSX is safe against injection attacks. You can create JSX variables from user inputs and then use those variables throughout your app without any problems. React escapes all values embedded in JSX and it converts everything to strings before rendering.
@@ -504,8 +496,8 @@ To do so, we’d use `.map()`:
 
 const history = this.state.history;
 
-const changes = history.map((changeNum, changeDesc) => {  
-  return <li key={changeNum}>{changeDesc}</li>;  
+const changes = history.map((changeNum, changeDesc) => {
+  return <li key={changeNum}>{changeDesc}</li>;
 }
 
 You can make `.map()` as complicated as you need it to be, creating variables inside the arrow function you call in order to render the elements, CSS classes, and content as needed.
@@ -532,8 +524,8 @@ Consider the example we used above:
 
 const history = this.state.history;
 
-const changes = history.map((changeNum, changeDesc) => {  
-  return <li key={changeNum}>{changeDesc}</li>;  
+const changes = history.map((changeNum, changeDesc) => {
+  return <li key={changeNum}>{changeDesc}</li>;
 }
 
 Because we grab values from the state history, we know those values won’t need to change. When they do change, we’ll save those changes as new entries in `this.state.history`.

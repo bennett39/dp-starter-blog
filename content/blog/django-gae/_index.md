@@ -10,8 +10,6 @@ slug: >-
   /@bennettgarner/deploying-a-django-application-to-google-app-engine-f9c91a30bd35
 ---
 
-![](/Users/bennettgarner/Repos/medium-export-4b46aa4e91f20dbf349cd1ed9133a2978c8dcbbd9f7d7b84cef20f84ed36ffda/posts/md_1643327843943/img/1__8cSlfkZSfGoXHjatjn8HeQ.png)
-
 _Google’s docs were helpful, up until I tried to deploy something real…_
 
 Today, I successfully deployed a Django application that was working locally to a Google App Engine instance online.
@@ -85,7 +83,7 @@ We’ve successfully created the SQL instance, but that doesn’t mean we’re h
 
 We need a server that can accept requests locally and relay them to our new remote server. Luckily Google has already built such a tool, known as Cloud SQL Proxy. To install it, navigate to the directory where your Django app’s `manage.py` is located. Then run the following command to download the proxy, if you’re on Ubuntu:
 
-wget [https://dl.google.com/cloudsql/cloud\_sql\_proxy.linux.amd64](https://dl.google.com/cloudsql/cloud_sql_proxy.linux.amd64) -O  
+wget [https://dl.google.com/cloudsql/cloud\_sql\_proxy.linux.amd64](https://dl.google.com/cloudsql/cloud_sql_proxy.linux.amd64) -O
 cloud\_sql\_proxy
 
 You’ll need to change that downloaded file’s permissions in order for your machine to execute it:
@@ -96,7 +94,7 @@ Now we’re ready to do some linkage between our local machine and the Cloud SQL
 
 To start the SQL server locally:
 
-./cloud\_sql\_proxy \\  
+./cloud\_sql\_proxy \\
 \-instances"\[YOUR\_INSTANCE\_CONNECTION\_NAME\]"=tcp:3306
 
 Replace \[YOUR\_INSTANCE\_CONNECTION\_NAME\] with the `connectionName` that we copied above.
@@ -123,35 +121,35 @@ This will be useful when we actually deploy the application. In production, the 
 
 To set up this if/else statement, replace your current database config information with this in `settings.py`:
 
-\# \[START db\_setup\]  
-if os.getenv('GAE\_APPLICATION', None):  
-    # Running on production App Engine, so connect to Google Cloud SQL using  
-    # the unix socket at /cloudsql/<your-cloudsql-connection string>  
-    DATABASES = {  
-        'default': {  
-            'ENGINE': 'django.db.backends.mysql',  
-            'HOST': '/cloudsql/\[YOUR-CONNECTION-NAME\]',  
-            'USER': '\[YOUR-USERNAME\]',  
-            'PASSWORD': '\[YOUR-PASSWORD\]',  
-            'NAME': '\[YOUR-DATABASE\]',  
-        }  
+\# \[START db\_setup\]
+if os.getenv('GAE\_APPLICATION', None):
+    # Running on production App Engine, so connect to Google Cloud SQL using
+    # the unix socket at /cloudsql/<your-cloudsql-connection string>
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.mysql',
+            'HOST': '/cloudsql/\[YOUR-CONNECTION-NAME\]',
+            'USER': '\[YOUR-USERNAME\]',
+            'PASSWORD': '\[YOUR-PASSWORD\]',
+            'NAME': '\[YOUR-DATABASE\]',
+        }
     }
 
-else:  
-    # Running locally so connect to either a local MySQL instance or connect   
-    # to Cloud SQL via the proxy.  To start the proxy via command line:   
-    #    $ cloud\_sql\_proxy -instances=\[INSTANCE\_CONNECTION\_NAME\]=tcp:3306   
-    # See [https://cloud.google.com/sql/docs/mysql-connect-proxy](https://cloud.google.com/sql/docs/mysql-connect-proxy)  
-    DATABASES = {  
-        'default': {  
-            'ENGINE': 'django.db.backends.mysql',  
-            'HOST': '127.0.0.1',  
-            'PORT': '3306',  
-            'NAME': '\[YOUR-DATABASE\]',  
-            'USER': '\[YOUR-USERNAME\]',  
-            'PASSWORD': '\[YOUR-PASSWORD\]',  
-        }  
-    }  
+else:
+    # Running locally so connect to either a local MySQL instance or connect
+    # to Cloud SQL via the proxy.  To start the proxy via command line:
+    #    $ cloud\_sql\_proxy -instances=\[INSTANCE\_CONNECTION\_NAME\]=tcp:3306
+    # See [https://cloud.google.com/sql/docs/mysql-connect-proxy](https://cloud.google.com/sql/docs/mysql-connect-proxy)
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.mysql',
+            'HOST': '127.0.0.1',
+            'PORT': '3306',
+            'NAME': '\[YOUR-DATABASE\]',
+            'USER': '\[YOUR-USERNAME\]',
+            'PASSWORD': '\[YOUR-PASSWORD\]',
+        }
+    }
 \# \[END db\_setup\]
 
 Use `connectionName` and the username, password, and database names you created in the previous step.
@@ -186,20 +184,20 @@ I’ll use the directory names `/`, `/mysite`, and `/myapp` to specify which fol
 
 This is the basic config file for App Engine. You can change a lot of settings here, but the most basic configuration will get your app up and running for now. Just use this:
 
-\# \[START django\_app\]  
+\# \[START django\_app\]
 runtime: python37
 
-handlers:  
-\# This configures Google App Engine to serve the files in the app's  
-\# static directory.  
-\- url: /static  
+handlers:
+\# This configures Google App Engine to serve the files in the app's
+\# static directory.
+\- url: /static
   static\_dir: static/
 
-\# This handler routes all requests not caught above to the main app.   
-\# It is required when static routes are defined, but can be omitted   
-\# (along with the entire handlers section) when there are no static   
-\# files defined.  
-\- url: /.\*  
+\# This handler routes all requests not caught above to the main app.
+\# It is required when static routes are defined, but can be omitted
+\# (along with the entire handlers section) when there are no static
+\# files defined.
+\- url: /.\*
   script: auto
 
 \# \[END django\_app\]
@@ -210,13 +208,13 @@ This is a file App Engine looks for by default. In it, we import the WSGI inform
 
 from mysite.wsgi import application
 
-\# App Engine by default looks for a main.py file at the root of the app  
-\# directory with a WSGI-compatible object called app.  
-\# This file imports the WSGI-compatible object of the Django app,  
-\# application from mysite/wsgi.py and renames it app so it is  
-\# discoverable by App Engine without additional configuration.  
-\# Alternatively, you can add a custom entrypoint field in your app.yaml:  
-\# entrypoint: gunicorn -b :$PORT mysite.wsgi  
+\# App Engine by default looks for a main.py file at the root of the app
+\# directory with a WSGI-compatible object called app.
+\# This file imports the WSGI-compatible object of the Django app,
+\# application from mysite/wsgi.py and renames it app so it is
+\# discoverable by App Engine without additional configuration.
+\# Alternatively, you can add a custom entrypoint field in your app.yaml:
+\# entrypoint: gunicorn -b :$PORT mysite.wsgi
 app = application
 
 ### `/requirements.txt`
@@ -233,25 +231,25 @@ We already changed the database settings in `settings.py` but we need to add one
 
 The `STATIC_URL` field should already be in your `settings.py`, but if it's not or if it's not configured as below, update it.
 
-\# Static files (CSS, JavaScript, Images)  
+\# Static files (CSS, JavaScript, Images)
 \# [https://docs.djangoproject.com/en/2.1/howto/static-files/](https://docs.djangoproject.com/en/2.1/howto/static-files/)
 
-\# Google App Engine: set static root for local static files  
-\# [https://cloud.google.com/appengine/docs/flexible/python/serving-static-files](https://cloud.google.com/appengine/docs/flexible/python/serving-static-files)  
-STATIC\_URL = '/static/'  
+\# Google App Engine: set static root for local static files
+\# [https://cloud.google.com/appengine/docs/flexible/python/serving-static-files](https://cloud.google.com/appengine/docs/flexible/python/serving-static-files)
+STATIC\_URL = '/static/'
 STATIC\_ROOT = 'static'
 
 ### `/mysite/wsgi.py`
 
 This file should already exist and be correctly implemented. But if you’ve made changes to it, or if there are problems, here is what it should look like. Take care to change all references to `mysite` to whatever your Django app's naming scheme is.
 
-"""  
+"""
 WSGI config for mysite project.
 
 It exposes the WSGI callable as a module-level variable named \`\`application\`\`.
 
-For more information on this file, see  
-https://docs.djangoproject.com/en/2.1/howto/deployment/wsgi/  
+For more information on this file, see
+https://docs.djangoproject.com/en/2.1/howto/deployment/wsgi/
 """
 
 import os

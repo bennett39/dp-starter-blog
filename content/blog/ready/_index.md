@@ -11,8 +11,6 @@ slug: /@bennettgarner/developer-career-advice-start-before-youre-ready-e25107b8b
 
 The most successful people in the world all have something in common. They jump into projects, ventures, relationships before they know everything.
 
-![](/Users/bennettgarner/Repos/medium-export-4b46aa4e91f20dbf349cd1ed9133a2978c8dcbbd9f7d7b84cef20f84ed36ffda/posts/md_1643327843943/img/1__O6FTeDfkYJcxRdpZrgM41w.png)
-
 ### A Renaissance Man
 
 In the early 1480s, Leonardo da Vinci was still a young man. He had not yet painted The Last Supper or the Mona Lisa. Indeed, he was a young man with some skills, generous curiosity, and the courage to start before he was ready.

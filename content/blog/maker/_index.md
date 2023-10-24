@@ -14,8 +14,6 @@ slug: >-
 
 Meetings ruin your productivity. If you’re a developer building complex applications, you should follow the Maker Schedule.
 
-![](/Users/bennettgarner/Repos/medium-export-4b46aa4e91f20dbf349cd1ed9133a2978c8dcbbd9f7d7b84cef20f84ed36ffda/posts/md_1643327843943/img/1__8zBoZdSqVB4XOTWsUmTXrg.png)
-
 ### My Big Problem
 
 As a software developer, I hate meetings. If you’ve worked as a developer, you probably understand.
@@ -30,7 +28,7 @@ As a developer, a meeting costs you a lot.
 
 It wasn’t until I read Paul Graham’s “[Maker Schedule, Manager Schedule](http://paulgraham.com/makersschedule.html)” that I really grasped the problem. After reading it, I consider that article required reading for all software developers.
 
-[**Maker's Schedule, Manager's Schedule**  
+[**Maker's Schedule, Manager's Schedule**
 _"...the mere consciousness of an engagement will sometimes worry a whole day." Charles Dickens July 2009 One reason…_paulgraham.com](http://paulgraham.com/makersschedule.html "http://paulgraham.com/makersschedule.html")[](http://paulgraham.com/makersschedule.html)
 
 _Feel free to stop reading this article and go read Paul Graham’s. It’s really that good and insightful._
@@ -64,8 +62,6 @@ I share my best content with my email list for free.
 
 ### Cascading Effect of Meetings
 
-![](/Users/bennettgarner/Repos/medium-export-4b46aa4e91f20dbf349cd1ed9133a2978c8dcbbd9f7d7b84cef20f84ed36ffda/posts/md_1643327843943/img/1__4e43PgpgzveKmCqDoLku__Q.jpeg)
-
 Graham goes on to say that even the mere presence of a meeting on the calendar can cause cascading effects.
 
 I’ve definitely felt this. If I know I have a meeting in a few hours, I’m less likely to start on something ambitious.
@@ -97,8 +93,6 @@ It’s important that managers understand this tradeoff:
 > \[T\]he smarter ones restrain themselves, if they know that some of the people working for them need long chunks of time to work in. … I suspect founders may increasingly be able to resist, or at least postpone, turning into managers.
 
 ### What You Can Do as a Developer
-
-![](/Users/bennettgarner/Repos/medium-export-4b46aa4e91f20dbf349cd1ed9133a2978c8dcbbd9f7d7b84cef20f84ed36ffda/posts/md_1643327843943/img/1__a0Ve4jk__XRvWkC__SS1S79w.jpeg)
 
 If large blocks of uninterrupted time are critical to working effectively as a developer, you can start to see some implications.
 

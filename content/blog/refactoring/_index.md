@@ -9,8 +9,6 @@ keywords: []
 slug: /@bennettgarner/how-to-refactor-existing-code-70e9e5af4ce3
 ---
 
-![](/Users/bennettgarner/Repos/medium-export-4b46aa4e91f20dbf349cd1ed9133a2978c8dcbbd9f7d7b84cef20f84ed36ffda/posts/md_1643327843943/img/1__x6Oj5uI7u9KhI__av7kW7WQ.png)
-
 As a developer, most of your job is updating existing code. However, there aren’t many guides or tutorials to teach you how to successfully refactor and what to look for.
 
 In this post, I’ll share a simple set of guidelines that have served me well when I have to refactor.
@@ -83,10 +81,10 @@ When you write functions & refactor other people’s functions, keep this in min
 
 I wrote this function yesterday:
 
-def get\_company\_override\_rate(self, date):  
-    “”” Find the currency conversion rate for this time period “””  
-    date = arrow.get(date)  
-    rate = self.conversion\_rates.get(date.format(‘YYYY-MM’))         
+def get\_company\_override\_rate(self, date):
+    “”” Find the currency conversion rate for this time period “””
+    date = arrow.get(date)
+    rate = self.conversion\_rates.get(date.format(‘YYYY-MM’))
     return rate
 
 I’m not saying this function is the pinnacle of simplicity. There’s more that could be done to make it simpler. But it’s short and immediately clear what it does.

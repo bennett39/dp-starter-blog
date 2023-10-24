@@ -21,22 +21,22 @@ Django decides what to do with the URL you typed in. It also can take a look at 
 
 At its simplest, a Django response flow looks like this:
 
-\# urls.py  
-from django.urls import path  
+\# urls.py
+from django.urls import path
 from . import views
 
-urlpatterns = \[  
-    path('', views.index),  
-    path('hello/', views.hello),  
+urlpatterns = \[
+    path('', views.index),
+    path('hello/', views.hello),
 \]
 
-\# views.py  
+\# views.py
 from django.http import HttpResponse
 
-def index(request):  
+def index(request):
     return HttpResponse("You're at the index!")
 
-def hello(request):  
+def hello(request):
     return HttpResponse("Hello there, user.")
 
 In this simple example, when you type _whatever.com/hello_, Django knows to send back the HttpResponse defined in `hello` , because that’s what you’ve specified in your `urlpatterns`. If you just visit the index — whatever.com/ — then you’ll get the HttpResponse defined in `index` .
@@ -51,10 +51,10 @@ When you prepare a React application for production deployment, it gets compiled
 
 In our `views.py` we’ll just need to point at the React files. It’ll end up something like this:
 
-\# views.py  
+\# views.py
 from django.shortcuts import render
 
-def index(request):  
+def index(request):
     return render(request, "path/to/react/build/index.html")
 
 When Django receives a request for `index`, it will serve up the static production build of React that we’ve created.
@@ -67,34 +67,34 @@ To do so, we create interfaces known as serializers. These serializers convert t
 
 For example, when we send a GET request to the serializer for the `User` model in an example application, we might get:
 
-**HTTP 200 OK**  
-**Allow:** GET, POST, HEAD, OPTIONS  
-**Content-Type:** application/json  
-**Vary:** Accept  
-  
-\[  
-    {  
-        "url": "[http://127.0.0.1:8000/api/users/2/](http://127.0.0.1:8000/api/users/2/)",  
-        "username": "testing",  
-        "email": "[test@gmail.com](mailto:bennettgarner+test@gmail.com)",  
-        "groups": \[\]  
-    },  
-    {  
-        "url": "[http://127.0.0.1:8000/api/users/1/](http://127.0.0.1:8000/api/users/1/)",  
-        "username": "bennett",  
-        "email": "[hello@bennettgarner.com](mailto:hello@bennettgarner.com)",  
-        "groups": \[\]  
-    }  
+**HTTP 200 OK**
+**Allow:** GET, POST, HEAD, OPTIONS
+**Content-Type:** application/json
+**Vary:** Accept
+
+\[
+    {
+        "url": "[http://127.0.0.1:8000/api/users/2/](http://127.0.0.1:8000/api/users/2/)",
+        "username": "testing",
+        "email": "[test@gmail.com](mailto:bennettgarner+test@gmail.com)",
+        "groups": \[\]
+    },
+    {
+        "url": "[http://127.0.0.1:8000/api/users/1/](http://127.0.0.1:8000/api/users/1/)",
+        "username": "bennett",
+        "email": "[hello@bennettgarner.com](mailto:hello@bennettgarner.com)",
+        "groups": \[\]
+    }
 \]
 
 When React needs to make changes to the database, it creates a JSON-format request and sends it via POST back to the Django serializer.
 
 We could add a new `User` to the above example by sending a POST request in this format:
 
-{  
-    "username": "",  
-    "email": "",  
-    "groups": \[\]  
+{
+    "username": "",
+    "email": "",
+    "groups": \[\]
 }
 
 We can do this with any model in our database, not just `User`, even custom models. Serializers are actually pretty easy to implement, as we’ll see.
@@ -104,8 +104,6 @@ Serializers are the key to allowing React to talk to the database. The Django RE
 ### How it fits together
 
 I made a graphic so we’re on the same page about how all this works:
-
-![](/Users/bennettgarner/Repos/medium-export-4b46aa4e91f20dbf349cd1ed9133a2978c8dcbbd9f7d7b84cef20f84ed36ffda/posts/md_1643327843943/img/1__lAMsvtB6afHwTQYCNM1xvw.png)
 
 ### To-do list
 
@@ -125,12 +123,12 @@ We’ll actually get to coding in another tutorial. But I know that if someone h
 
 You can learn how to build a REST API in Django with this post I wrote:
 
-[**Build your first REST API with Django REST Framework**  
+[**Build your first REST API with Django REST Framework**
 _Building a REST API in Django is so super easy. In this tutorial, we’ll walk through the steps to get your first API up…_medium.com](https://medium.com/swlh/build-your-first-rest-api-with-django-rest-framework-e394e39a482c "https://medium.com/swlh/build-your-first-rest-api-with-django-rest-framework-e394e39a482c")[](https://medium.com/swlh/build-your-first-rest-api-with-django-rest-framework-e394e39a482c)
 
 Learn everything you’d want to know about starting React here:
 
-[**New to React? You Need to Understand These Key Concepts Before Anything Else**  
+[**New to React? You Need to Understand These Key Concepts Before Anything Else**
 _That online tutorial you just finished didn’t teach you the “big picture” of React. Don’t make the same mistakes I…_levelup.gitconnected.com](https://levelup.gitconnected.com/new-to-react-you-need-to-understand-these-key-concepts-before-anything-else-2247efc1eaac "https://levelup.gitconnected.com/new-to-react-you-need-to-understand-these-key-concepts-before-anything-else-2247efc1eaac")[](https://levelup.gitconnected.com/new-to-react-you-need-to-understand-these-key-concepts-before-anything-else-2247efc1eaac)
 
 ### Like what you’ve read here?

@@ -10,8 +10,6 @@ slug: >-
   /@bennettgarner/getting-started-with-numpy-learn-the-basics-in-minutes-5f896074e13f
 ---
 
-![](/Users/bennettgarner/Repos/medium-export-4b46aa4e91f20dbf349cd1ed9133a2978c8dcbbd9f7d7b84cef20f84ed36ffda/posts/md_1643327843943/img/1__0rwFN3MMpWrnqdBBvOMJvg.png)
-
 NumPy is an awesome tool that you should be familiar with if you’re a Python developer, data scientist, or just somebody interested in doing things with data.
 
 But maybe you haven’t tried to use it or have been intimidated by its apparent learning curve and differences from standard Python data structures.
@@ -19,8 +17,6 @@ But maybe you haven’t tried to use it or have been intimidated by its apparent
 In this post, we’ll take a look at NumPy, what you can use it for, when you definitely should use it, when not to use it, and why it’s so popular.
 
 ### NumPy Advantage #1: Speed
-
-![](/Users/bennettgarner/Repos/medium-export-4b46aa4e91f20dbf349cd1ed9133a2978c8dcbbd9f7d7b84cef20f84ed36ffda/posts/md_1643327843943/img/1__6EswSN4MTsOSAZJlLepcJQ.jpeg)
 
 When it comes to doing heavy data processing and calculations with Python, you’ll often hear about how Python is natively pretty slow.
 
@@ -34,41 +30,39 @@ NumPy is one such C extension. While CPython itself is written in C, it has to b
 
 Here’s an example (thanks to [tom10](https://stackoverflow.com/a/994545) for this code snippet, comments are mine):
 
-from numpy import arange  
+from numpy import arange
 from timeit import Timer
 
-Nelements = 10000  
+Nelements = 10000
 Ntimeits = 10000
 
-x = arange(Nelements) # <-- A NumPy range  
+x = arange(Nelements) # <-- A NumPy range
 y = range(Nelements) # <-- A standard Python range
 
-\# The numpy .sum() method is optimized for calculations  
+\# The numpy .sum() method is optimized for calculations
 t\_numpy = Timer("x.sum()", "from \_\_main\_\_ import x")
 
-\# The CPython sum() function is more generalized  
+\# The CPython sum() function is more generalized
 t\_list = Timer("sum(y)", "from \_\_main\_\_ import y")
 
-print("numpy: %.3e" % (t\_numpy.timeit(Ntimeits)/Ntimeits,))  
+print("numpy: %.3e" % (t\_numpy.timeit(Ntimeits)/Ntimeits,))
 print("list:  %.3e" % (t\_list.timeit(Ntimeits)/Ntimeits,))
 
 On my computer, that output:
 
-python time-sum.py   
-numpy: 2.650e-05  
+python time-sum.py
+numpy: 2.650e-05
 list:  5.758e-04
 
 In this case, NumPy is 20x faster at summing values in a range. That’s significant, and it starts to give you an insight into why NumPy is so valuable and widely used.
 
 ### NumPy Advantage #2: Memory
 
-![](/Users/bennettgarner/Repos/medium-export-4b46aa4e91f20dbf349cd1ed9133a2978c8dcbbd9f7d7b84cef20f84ed36ffda/posts/md_1643327843943/img/1__9mDNpcAmftJpsafZ1TC9Tg.jpeg)
-
 NumPy is more efficient with memory and faster at reading/writing. This is because NumPy places restrictions on how you can build your arrays.
 
 In standard Python, a list can include any values:
 
-\# This is a valid list  
+\# This is a valid list
 my\_list = \['a', 2, len, {'z': 1}\]
 
 In that list, we have a string, integer, function, and dictionary. But Python doesn’t actually store those 4 things sequentially in memory. Instead, a Python list is just a series of pointers to the objects themselves, wherever they exist.
@@ -79,31 +73,29 @@ All those pointers add to the complexity and size of Python lists. Every value i
 
 We can test out that list objects are passed by reference for ourselves:
 
-\>>> my\_list = \['a', 2, len, {'z': 1}\]  
-\>>> my\_list\[2\](my\_list)  
-4  
-\>>> len(my\_list) # Equivalent to the line above  
+\>>> my\_list = \['a', 2, len, {'z': 1}\]
+\>>> my\_list\[2\](my\_list)
+4
+\>>> len(my\_list) # Equivalent to the line above
 4
 
 By contrast, NumPy arrays are smart enough to figure out if you’ve passed in a list of uniform values. If you did, NumPy will optimize storage and operations on those values.
 
-\>>> a = np.array(\[2,3,4\])  
-\>>> a  
-array(\[2, 3, 4\])  
-\>>> a.dtype  
+\>>> a = np.array(\[2,3,4\])
+\>>> a
+array(\[2, 3, 4\])
+\>>> a.dtype
 dtype('int64') # Stored as a 64-bit integer, instead of Python obj
 
-\# We can still create a np array from my\_list  
-\>>> b = np.array(my\_list)  
-\# But everything is stored in the standard Python way as objects  
-\>>> b  
+\# We can still create a np array from my\_list
+\>>> b = np.array(my\_list)
+\# But everything is stored in the standard Python way as objects
+\>>> b
 array(\['a', 2, <built-in function len>, {'z': 1}\], dtype=object)
 
 When you give NumPy standardized inputs, the memory optimizations can be substantial. For instance, Python would take 12GB of memory to handle a billion `float`s. NumPy on the other hand, could do so with about 4GB. \[Hat tip again to [Alex Martelli](https://stackoverflow.com/a/994010)\]
 
 ### NumPy Advantage #3: Convenience
-
-![](/Users/bennettgarner/Repos/medium-export-4b46aa4e91f20dbf349cd1ed9133a2978c8dcbbd9f7d7b84cef20f84ed36ffda/posts/md_1643327843943/img/1__IBRIX3IhRuQr1bP2bnnffQ.jpeg)
 
 If you’re doing stuff with large datasets, there are some common operations you’ll need to undertake.
 
@@ -129,13 +121,13 @@ By far, the most popular scientific Python distribution is Anaconda. There’s a
 
 Create a new directory and install Anaconda/Miniconda in a virtual environment:
 
-\# Install the distribution  
+\# Install the distribution
 pyenv install miniconda3-latest
 
-\# Create a virtual environment using that distribution  
+\# Create a virtual environment using that distribution
 pyenv virtualenv miniconda3-latest <your-env-name>
 
-\# Set that virtual environment as the default for this directory  
+\# Set that virtual environment as the default for this directory
 pyenv local <your-env-name>
 
 Now that we have it installed, we need to activate Anaconda. Specifically, Anaconda uses its own package manager (like `pip` that you might be familiar with). This package manager is called `conda` .
@@ -151,8 +143,8 @@ You can use the `conda` package manager with many types of shells:
 
 To activate it:
 
-conda init <your shell name>  
-eval $SHELL # Restart your shell so changes take effect  
+conda init <your shell name>
+eval $SHELL # Restart your shell so changes take effect
 conda activate <your-env-name>
 
 Now, we can install NumPy.
@@ -161,12 +153,12 @@ conda install numpy
 
 Check it out!
 
-$ python  
-Python 3.8.0 (default, Nov  1 2019, 18:25:29)   
-\[GCC 7.3.0\] :: Anaconda, Inc. on linux  
-Type "help", "copyright", "credits" or "license" for more information.  
-\>>> import numpy  
-\>>> numpy.\_\_version\_\_  
+$ python
+Python 3.8.0 (default, Nov  1 2019, 18:25:29)
+\[GCC 7.3.0\] :: Anaconda, Inc. on linux
+Type "help", "copyright", "credits" or "license" for more information.
+\>>> import numpy
+\>>> numpy.\_\_version\_\_
 '1.11.3'
 
 #### 2\. Try Some Tutorials
