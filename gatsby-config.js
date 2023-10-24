@@ -12,7 +12,7 @@ module.exports = {
     title: `Developer Purpose: Daily`,
     author: {
       name: `Bennett Garner`,
-      summary: `a staff engineer in Boston who writes for 2k software engineers every day`,
+      summary: `a staff engineer in Boston who writes for 2k software engineers every day.`,
     },
     description: `I write something new for software developers every day.`,
     siteUrl: `https://daily.developerpurpose.com`,
