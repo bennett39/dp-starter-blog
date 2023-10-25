@@ -38,15 +38,13 @@ const Bio = () => {
         quality={95}
         alt="Profile picture"
       />
-      {author?.name && (
-        <p>
-          Written by <strong>{author.name}</strong> {author?.summary || null}
-          {` `}
-          <a href={`https://bennettgarner.ck.page`}>
-            You should sign up for the daily email.
-          </a>
-        </p>
-      )}
+      <p>
+        I write something new every day for 2k software developers.
+        {` `}
+        <a href={`https://bennettgarner.ck.page`}>
+          You should sign up for the daily email.
+        </a>
+      </p>
     </div>
   )
 }
