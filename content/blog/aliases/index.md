@@ -1,7 +1,7 @@
 ---
 title: One habit I use to automate productivity
 description: Always be thinking about the ways you can reduce repetitive tasks
-date: '2023-11-18T21:04:30.015Z'
+date: '2023-11-21:04:30.015Z'
 categories: []
 keywords: []
 slug: aliases
