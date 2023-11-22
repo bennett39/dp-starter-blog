@@ -1,14 +1,14 @@
 ---
-title: Want to Understand Computer Science? Study Abstraction.
-date: 2020-02-25T03:34:01.774Z
+title: Software engineering is all about abstraction
+date: 2023-11-22T13:34:01.774Z
 description: Peel back the layers to become a great developer
 categories: []
 keywords: []
-slug: /@bennettgarner/want-to-understand-computer-science-study-abstraction-cb785a19bbc5
+slug: abstraction
 ---
 Most people who are new to coding (and perhaps most developers, period) have a poor understanding of the work that went into the foundation beneath today’s complicated applications.
 
-In this post, I’d like to argue that understanding fundamentals is key to building new things. I’ve argued this point before, in [my most popular (and controversial) Medium post](https://blog.usejournal.com/consider-yourself-a-developer-you-should-solve-the-project-euler-problems-ed8d13397c9c).
+In this post, I’d like to argue that understanding fundamentals is key to building new things.
 
 ![abstract painting](https://miro.medium.com/max/2000/1*lmd-RmzVqCeNgZXGaIOP4Q.jpeg "abstraction")
 
@@ -16,7 +16,7 @@ Don’t get me wrong. I’m not telling you that you should write assembly, buil
 
 But I will say that understanding the core concepts of computers and how they work will take you much farther than just understanding a single language, web framework, or library.
 
-> In the day and age of cloud computing, interpreted languages, web frameworks, serverless, and big data, understanding the fundamentals is less common and more valuable than ever.
+In the day and age of cloud computing, interpreted languages, serverless, and big data, understanding the fundamentals is less common and more valuable than ever.
 
 ### Why You Should Care
 
@@ -26,7 +26,7 @@ In one sense you’re right. You can write a program that works in JavaScript or
 
 In fact, you can have a whole career as a software developer where you never worry about implementation details.
 
-> This is true precisely because the people who went before you were so good at their jobs and refined their work so well.
+This is true precisely because the people who went before you were so good at their jobs and refined their work so well.
 
 But here’s the kicker: understanding the fundamentals is the key to **fast learning** and **longevity** in your career as a software engineer.
 
@@ -34,11 +34,11 @@ Languages, frameworks, libraries, and applications come and go. The fundamentals
 
 ### The Magic Question: What If I Go One Level Deeper?
 
-Take a modern, interpreted programming language like Python. Ask 10 Python developers how Python actually executes your code and you’re likely to get 10 different responses. Most of them wrong or incomplete.
-
-I won’t answer the questions of how CPython’s interpreter works, here. For one, I’m not anywhere near an expert on the subject. But mostly, I won’t answer the question to make a point: abstraction is so critical to everything we do as software developers.
-
 If you’re working as a software developer and you’re not writing byte code on punch cards, then you have abstraction (and the work of decades of other programmers) to thank.
+
+Take a modern, interpreted programming language like Python. Ask 10 Python developers how Python actually executes your code and you’re likely to get 10 different responses. Including my answer! I’m not anywhere near an expert on the subject, and I'm sure there are aspects I'm missing.
+
+But I rely on Python execution every day!
 
 This trend won’t end soon. Abstraction continues. The current cutting edge of abstraction is serverless computing, “no code” software, single page applications, and even machine learning.
 
@@ -120,10 +120,12 @@ Interpreted languages don’t need to be compiled because they have an underlyin
 
 This new layer gives us even greater flexibility to write programs quickly:
 
-def fibonacci(n):\
-    if n < 2:\
-        return 1\
+```python
+def fibonacci(n):
+    if n < 2:
+        return 1
     return fibonacci(n-1) + fibonacci(n-2)
+```
 
 #### Local to Servers
 
@@ -146,8 +148,6 @@ TCP/IP, SMTP/POP, and more came to help files move across the connected internet
 Browsers came about to help dynamically display Hypertext Markup documents (HTML) and other media files. The internet as we know it is one big abstraction of the bits and bytes on processors, RAM, and hard drives all over the world!
 
 #### Privately-Owned to Cloud
-
-![computer server](https://miro.medium.com/max/1400/1*lOqD_NHM7gQY9Ax9TF4wZg.jpeg)
 
 It used to be that if you wanted a website or file storage, you had to buy your own physical equipment. You’d have to set up hard drives and servers for yourself and expand your equipment as your needs grew.
 
@@ -174,7 +174,7 @@ It’s so crazy and cool! There are so many layers and so many people to thank f
 
 So, here’s my hot take:
 
-> If you’re not interested in layers of abstraction, you’re not doing real software engineering — you’re just writing some syntax.
+If you’re not interested in layers of abstraction, you’re not doing real software engineering — you’re just writing some syntax.
 
 Writing code does not make you a software engineer. Understanding and being thoughtful of the whole context and system that your code is a part of is the key. Even better, build things that make future problems easier — that’s abstraction at its finest.
 
@@ -182,13 +182,3 @@ What does this mean for you? Two things:
 
 1. If you want to be a great developer, understand the work that went before you so you know what high-value abstraction looks like
 2. To stay up to date and gainfully employed as a developer, follow the trend of abstraction wherever it’s headed next
-
-### About Bennett
-
-I’m a web developer building things with Python and JavaScript.
-
-*Want my best content on web development and becoming a better programmer?*
-
-*I share my favorite advice with my email list — no spam, nothing sales-y, just useful content.*
-
-[Join 500 other developers currently in my email series.](https://sunny-architect-5371.ck.page/0a60026a5d)
