@@ -1,6 +1,6 @@
 ---
 title: How do I go deeper?
-description:
+description: I received some emails asking how do you practically go one level deeper
 date: '2023-11-25T16:04:30.015Z'
 categories: []
 keywords: []
