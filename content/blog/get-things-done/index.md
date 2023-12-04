@@ -1,6 +1,6 @@
 ---
 title: Become known for getting things done
-description: My #1 piece of advice for developers who want to advance their career
+description: My 1 piece of advice for developers who want to advance their career
 date: '2023-12-03T16:04:30.015Z'
 categories: []
 keywords: []
