@@ -9,4 +9,4 @@ slug: tech-debt-comic
 
 This week at Satiresoft...
 
-![tech debt comic](https://raw.githubusercontent.com/bennett39/dp-starter-blog/master/content/blog/tech-debt-comic/tech-debt.png)
+![tech debt comic](./tech-debt.png)
