@@ -1,5 +1,5 @@
 ---
-title: Endless urgency indicates a problem elsewhere in thr process
+title: Endless urgency indicates a problem elsewhere in the process
 description:
 date: '2023-12-17T16:04:30.015Z'
 categories: []
