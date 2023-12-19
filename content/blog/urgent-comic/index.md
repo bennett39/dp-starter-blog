@@ -9,4 +9,4 @@ slug: urgent-comic
 
 This week at Satiresoft...
 
-<img src="https://github.com/bennett39/dp-starter-blog/blob/master/content/blog/urgent-comic/urgent.png" width="630">
+<img src="https://github.com/bennett39/dp-starter-blog/blob/master/content/blog/urgent-comic/urgent.png?raw=true" width="630">
