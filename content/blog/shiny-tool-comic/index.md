@@ -9,4 +9,4 @@ slug: shiny-tool-comic
 
 This week at Satiresoft...
 
-![shiny tool comic](https://raw.githubusercontent.com/bennett39/dp-starter-blog/master/content/blog/shiny-tool-comic/shiny.png)
+![shiny tool comic](./shiny.png)
