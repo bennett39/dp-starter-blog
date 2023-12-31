@@ -1,5 +1,5 @@
 ---
-title: Autonomy is the marker of a high-value developer
+title: How to learn autonomy
 description:
 date: '2023-12-31T12:00:00.000Z'
 categories: []
