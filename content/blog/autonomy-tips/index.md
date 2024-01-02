@@ -1,7 +1,7 @@
 ---
 title: Tips from readers on building autonomy
 description: What senior engineers wish more junior developers knew...
-date: '2024-01-01T12:00:00.000Z'
+date: '2024-01-02T12:00:00.000Z'
 categories: []
 keywords: []
 slug: autonomy-tips
