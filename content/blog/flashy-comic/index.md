@@ -9,4 +9,4 @@ slug: flashy-comic
 
 This week at Satiresoft...
 
-![flashy comic](https://raw.githubusercontent.com/bennett39/dp-starter-blog/master/content/blog/flashy-comic/flashy.png)
+<img src="https://raw.githubusercontent.com/bennett39/dp-starter-blog/master/content/blog/flashy-comic/flashy.png" width="630">
