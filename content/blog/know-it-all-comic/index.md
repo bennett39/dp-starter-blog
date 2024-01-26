@@ -1,10 +1,10 @@
 ---
-title: "Satiresoft: Complexity"
+title: "Satiresoft: Know it all"
 description:
-date: '2024-01-19T12:00:00.000Z'
+date: '2024-01-25T12:00:00.000Z'
 categories: []
 keywords: []
-slug: complexity-comic
+slug: know-it-all-comic
 ---
 
 This week at Satiresoft...
