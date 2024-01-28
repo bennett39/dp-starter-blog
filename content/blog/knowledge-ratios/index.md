@@ -1,5 +1,5 @@
 ---
-title: "Knowdledge ratios & the expert beginner developer"
+title: "Knowledge ratios & the expert beginner developer"
 description:
 date: '2024-01-26T12:00:00.000Z'
 categories: []
