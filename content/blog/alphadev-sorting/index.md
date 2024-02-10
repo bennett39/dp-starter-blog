@@ -1,7 +1,7 @@
 ---
 title: "Reinforcement learning produces faster algorithms"
 description:
-date: '2024-02-06T12:00:00.000Z'
+date: '2024-02-09T12:00:00.000Z'
 categories: []
 keywords: []
 slug: alphadev-sorting
