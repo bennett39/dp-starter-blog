@@ -1,6 +1,6 @@
 ---
 title: Just in case vs just in time
-date: '2024-09-07:00:00.000Z'
+date: '2024-09-07T12:00:00.000Z'
 categories: []
 keywords: []
 slug: just-in-case

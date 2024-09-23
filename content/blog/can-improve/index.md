@@ -1,6 +1,6 @@
 ---
 title: You can (& should want to) improve
-date: '2024-09-04:00:00.000Z'
+date: '2024-09-04T12:00:00.000Z'
 categories: []
 keywords: []
 slug: can-improve

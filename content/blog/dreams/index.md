@@ -1,6 +1,6 @@
 ---
 title: Remembering my dreams
-date: '2024-09-11:00:00.000Z'
+date: '2024-09-11T12:00:00.000Z'
 categories: []
 keywords: []
 slug: dreams

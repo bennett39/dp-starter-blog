@@ -1,6 +1,6 @@
 ---
 title: Opinions vs execution
-date: '2024-09-16:00:00.000Z'
+date: '2024-09-16T12:00:00.000Z'
 categories: []
 keywords: []
 slug: opinions-vs-execution

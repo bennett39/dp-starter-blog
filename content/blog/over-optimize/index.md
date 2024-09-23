@@ -1,6 +1,6 @@
 ---
 title: Over-optimization
-date: '2024-09-17:00:00.000Z'
+date: '2024-09-17T12:00:00.000Z'
 categories: []
 keywords: []
 slug: over-optimize

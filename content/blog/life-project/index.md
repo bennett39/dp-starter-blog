@@ -1,6 +1,6 @@
 ---
 title: What's your life project?
-date: '2024-09-03:00:00.000Z'
+date: '2024-09-03T12:00:00.000Z'
 categories: []
 keywords: []
 slug: life-project

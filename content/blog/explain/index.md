@@ -1,6 +1,6 @@
 ---
 title: Can you explain your work?
-date: '2024-09-23:00:00.000Z'
+date: '2024-09-23T12:00:00.000Z'
 categories: []
 keywords: []
 slug: explain

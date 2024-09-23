@@ -1,6 +1,6 @@
 ---
 title: Your tribe matters a lot
-date: '2024-09-02:00:00.000Z'
+date: '2024-09-02T12:00:00.000Z'
 categories: []
 keywords: []
 slug: tribe

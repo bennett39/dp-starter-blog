@@ -1,6 +1,6 @@
 ---
 title: The browser wars
-date: '2024-09-12:00:00.000Z'
+date: '2024-09-12T12:00:00.000Z'
 categories: []
 keywords: []
 slug: browser-wars
