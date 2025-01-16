@@ -24,11 +24,3 @@ You can also spend all day reading the code but still not know where your bug is
 Certainly, if you want to understand the code you'll need both - running and reading. But I still think running is more important.
 
 Many developers spend a lot of time reading code, when a few simple test runs would quickly demonstrate how it works.
-
-There's a dichotomy I've noticed among developers.
-
-When a test is failing or something is going wrong, some developers prefer to read the code to try to figure out what's happening.
-
-Other developers prefer to change something & run the code again to figure out how it works.
-
-In my personal experience, I find that the "runners" are much more effective than the "readers."
