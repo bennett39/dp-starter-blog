@@ -1,6 +1,6 @@
 ---
 title: The slog of honest work
-date: '2025-03-13:00:00.000Z'
+date: '2025-03-13T12:00:00.000Z'
 categories: []
 keywords: []
 slug: slog
